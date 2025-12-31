@@ -130,10 +130,13 @@ ${AI_CONFIG.conversationStrategy}`;
         };
       }
 
-      // Handle other errors
+      // Handle other errors - try to get useful response from AI
+      console.warn('Non-critical error, attempting to continue:', error);
+      
+      // If we got this far, the API responded but with an error - use fallback
       return {
         success: false,
-        message: null,
+        message: this.getFallbackResponse(userMessage),
         error: 'api_error',
       };
     }
