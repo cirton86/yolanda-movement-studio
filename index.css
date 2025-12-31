@@ -2375,3 +2375,289 @@ a {
     gap: 24px;
   }
 }
+
+/* ===================================
+   FLOATING IMAGE PLACEMENT
+   =================================== */
+
+.floating-image-container {
+  position: relative;
+  width: 100%;
+  max-width: 450px;
+  margin: 80px 0;
+  z-index: 10;
+}
+
+.floating-left {
+  float: left;
+  margin-right: 60px;
+  margin-left: -80px;
+}
+
+.floating-right {
+  float: right;
+  margin-left: 60px;
+  margin-right: -80px;
+}
+
+.floating-image {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.floating-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.floating-image:hover img {
+  transform: scale(1.08);
+}
+
+/* Red Overlay Effect (keep existing red) */
+.image-overlay-effect {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, 
+    rgba(247, 55, 24, 0.7) 0%, 
+    rgba(247, 55, 24, 0.4) 50%,
+    transparent 100%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.floating-image:hover .image-overlay-effect {
+  opacity: 1;
+}
+
+/* Image Caption */
+.image-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 24px;
+  background: linear-gradient(to top, rgba(10, 10, 10, 0.95), transparent);
+  transform: translateY(100%);
+  transition: transform 0.4s ease;
+}
+
+.floating-image:hover .image-caption {
+  transform: translateY(0);
+}
+
+.image-caption p {
+  color: white;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+/* Click indicator */
+.floating-image::after {
+  content: '👁️ Click to view';
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: rgba(247, 55, 24, 0.95);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.floating-image:hover::after {
+  opacity: 1;
+}
+
+/* Scroll reveal animations */
+[data-scroll-reveal="fade-right"] {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: all 0.8s ease;
+}
+
+[data-scroll-reveal="fade-left"] {
+  opacity: 0;
+  transform: translateX(40px);
+  transition: all 0.8s ease;
+}
+
+[data-scroll-reveal].revealed {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Mobile responsive */
+@media (max-width: 1024px) {
+  .floating-left, .floating-right {
+    float: none;
+    margin: 60px auto;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* ===================================
+   IMAGE MODAL
+   =================================== */
+
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.95);
+  z-index: 10000;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  overflow-y: auto;
+}
+
+.modal-overlay.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.modal-content {
+  position: relative;
+  max-width: 1200px;
+  width: 90%;
+  background: #1A1A1A;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(247, 55, 24, 0.3);
+  animation: slideUp 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+}
+
+@keyframes slideUp {
+  from { 
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  to { 
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.modal-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: rgba(247, 55, 24, 0.9);
+  color: white;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-close:hover {
+  background: #F73718;
+  transform: rotate(90deg);
+}
+
+.modal-image-container {
+  position: relative;
+  height: 600px;
+  overflow: hidden;
+}
+
+.modal-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.modal-message {
+  padding: 60px 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: linear-gradient(135deg, #1A1A1A 0%, #0A0A0A 100%);
+}
+
+.modal-message h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 42px;
+  color: #F73718;
+  margin-bottom: 24px;
+  font-weight: 600;
+}
+
+.modal-message p {
+  font-size: 20px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 20px;
+}
+
+.modal-signature {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 24px;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 30px;
+}
+
+/* Mobile modal */
+@media (max-width: 768px) {
+  .modal-content {
+    grid-template-columns: 1fr;
+    width: 95%;
+  }
+  
+  .modal-image-container {
+    height: 400px;
+  }
+  
+  .modal-message {
+    padding: 40px 30px;
+  }
+  
+  .modal-message h3 {
+    font-size: 32px;
+  }
+  
+  .modal-message p {
+    font-size: 18px;
+  }
+}

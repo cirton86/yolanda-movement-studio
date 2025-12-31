@@ -765,3 +765,102 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+// ===================================
+// FLOATING IMAGE MODAL SYSTEM
+// ===================================
+
+// Inspiring messages in Yolanda's voice
+const inspiringMessages = {
+  strength: {
+    title: "Strength Takes Time",
+    message: "Your body is capable of more than you think. Every session is a step toward the strength you deserve—not the strength you think you should have. Be patient with yourself. I'm patient with you."
+  },
+  balance: {
+    title: "Balance is a Practice",
+    message: "Balance isn't about perfection—it's about awareness. It's okay to wobble. It's okay to fall. What matters is that you showed up and tried. That's where real growth happens."
+  },
+  flexibility: {
+    title: "Flexibility is Freedom",
+    message: "Movement should make you feel capable, not broken. Each stretch, each mindful breath, is teaching your body to trust itself again. You're not too stiff. You're not too old. You're exactly where you need to be."
+  },
+  mindful: {
+    title: "Move with Intention",
+    message: "Your body speaks to you in whispers. My job is to help you listen. Every movement is a conversation—not a punishment, not a test. Just presence. Just patience. Just you, becoming stronger."
+  }
+};
+
+// Initialize modal system
+document.addEventListener('DOMContentLoaded', function() {
+  
+  // Get modal elements
+  const modal = document.getElementById('imageModal');
+  const modalImage = document.getElementById('modalImage');
+  const modalTitle = document.getElementById('modalTitle');
+  const modalInspiration = document.getElementById('modalInspiration');
+  const modalClose = document.querySelector('.modal-close');
+  
+  if (!modal) return; // Exit if modal doesn't exist
+  
+  // Add click handlers to all clickable images
+  const clickableImages = document.querySelectorAll('.clickable-image');
+  
+  clickableImages.forEach(image => {
+    image.addEventListener('click', function() {
+      const imageSrc = this.querySelector('img').src;
+      const messageKey = this.dataset.message;
+      const message = inspiringMessages[messageKey];
+      
+      // Set modal content
+      modalImage.src = imageSrc;
+      modalImage.alt = message.title;
+      modalTitle.textContent = message.title;
+      modalInspiration.textContent = message.message;
+      
+      // Show modal
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden'; // Prevent background scroll
+    });
+  });
+  
+  // Close modal handlers
+  function closeModal() {
+    modal.classList.remove('active');
+    document.body.style.overflow = ''; // Restore scroll
+  }
+  
+  if (modalClose) {
+    modalClose.addEventListener('click', closeModal);
+  }
+  
+  // Close on overlay click (outside modal content)
+  modal.addEventListener('click', function(e) {
+    if (e.target === modal) {
+      closeModal();
+    }
+  });
+  
+  // Close on Escape key
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && modal.classList.contains('active')) {
+      closeModal();
+    }
+  });
+  
+  // Scroll reveal observer for floating images
+  const scrollRevealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('revealed');
+        scrollRevealObserver.unobserve(entry.target); // Only reveal once
+      }
+    });
+  }, {
+    threshold: 0.2,
+    rootMargin: '0px 0px -50px 0px'
+  });
+  
+  // Observe all elements with scroll-reveal data attribute
+  const scrollRevealElements = document.querySelectorAll('[data-scroll-reveal]');
+  scrollRevealElements.forEach(el => scrollRevealObserver.observe(el));
+});

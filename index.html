@@ -367,6 +367,17 @@
     </div>
   </section>
 
+  <!-- Floating Inspiration Image 1 -->
+  <div class="floating-image-container floating-left" data-scroll-reveal="fade-right">
+    <div class="floating-image clickable-image" data-image="bridge-pose-red" data-message="strength">
+      <img src="./images/yolanda-professional/bridge-pose-red.jpg" alt="Core strength and stability" loading="lazy">
+      <div class="image-overlay-effect"></div>
+      <div class="image-caption">
+        <p>Core Strength</p>
+      </div>
+    </div>
+  </div>
+
   <!-- HOW IT WORKS SECTION -->
   <section class="section" id="how-it-works" style="background: var(--color-charcoal); padding: var(--spacing-12) 0;">
     <div class="container">
@@ -483,6 +494,17 @@
       </div>
     </div>
   </section>
+
+  <!-- Floating Inspiration Image 2 -->
+  <div class="floating-image-container floating-right" data-scroll-reveal="fade-left">
+    <div class="floating-image clickable-image" data-image="handstand-floral" data-message="balance">
+      <img src="./images/yolanda-professional/handstand-floral.jpg" alt="Balance and control" loading="lazy">
+      <div class="image-overlay-effect"></div>
+      <div class="image-caption">
+        <p>Balance & Control</p>
+      </div>
+    </div>
+  </div>
 
   <!-- PROGRAMS SECTION -->
   <section class="section" id="programs">
@@ -1087,6 +1109,17 @@
       </div>
     </div>
   </section>
+
+  <!-- Floating Inspiration Image 3 -->
+  <div class="floating-image-container floating-left" data-scroll-reveal="fade-right">
+    <div class="floating-image clickable-image" data-image="window-light" data-message="flexibility">
+      <img src="./images/yolanda-professional/window-light-kneeling.jpg" alt="Flexibility training" loading="lazy">
+      <div class="image-overlay-effect"></div>
+      <div class="image-caption">
+        <p>Flexibility</p>
+      </div>
+    </div>
+  </div>
 
   <!-- TESTIMONIALS SECTION -->
   <section class="section bg-charcoal" id="results">
@@ -1705,6 +1738,17 @@
     </div>
   </section>
 
+  <!-- Floating Inspiration Image 4 -->
+  <div class="floating-image-container floating-right" data-scroll-reveal="fade-left">
+    <div class="floating-image clickable-image" data-image="seated-portrait" data-message="mindful">
+      <img src="./images/yolanda-professional/seated-portrait.jpg" alt="Mindful movement practice" loading="lazy">
+      <div class="image-overlay-effect"></div>
+      <div class="image-caption">
+        <p>Mindful Practice</p>
+      </div>
+    </div>
+  </div>
+
   <!-- FAQ SECTION -->
   <section class="section" id="faq" style="background: var(--color-bg-elevated);">
     <div class="container">
@@ -2140,10 +2184,22 @@
     </div>
   </footer>
 
-
-
-
+  <!-- Image Modal with Inspiring Messages -->
+  <div id="imageModal" class="modal-overlay">
+    <div class="modal-content">
+      <button class="modal-close" aria-label="Close modal">&times;</button>
+      <div class="modal-image-container">
+        <img id="modalImage" src="" alt="">
+      </div>
+      <div class="modal-message">
+        <h3 id="modalTitle"></h3>
+        <p id="modalInspiration"></p>
+        <p class="modal-signature">— Yolanda</p>
+      </div>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
 </html>
+```
