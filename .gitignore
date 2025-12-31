@@ -1,0 +1,22 @@
+# Yolanda Movement Studio
+
+## Environment Files (DO NOT COMMIT)
+.env
+.env.local
+.env.production
+api-config.js
+
+## Node modules
+node_modules/
+
+## Build outputs
+dist/
+build/
+
+## IDE
+.vscode/
+.idea/
+
+## OS
+.DS_Store
+Thumbs.db

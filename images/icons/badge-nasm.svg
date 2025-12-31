@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Badge circle background -->
+  <circle cx="100" cy="100" r="90" fill="none" stroke="#F73718" stroke-width="4"/>
+  
+  <!-- Inner badge circle -->
+  <circle cx="100" cy="100" r="75" fill="none" stroke="#F73718" stroke-width="2"/>
+  
+  <!-- Dumbbell icon -->
+  <!-- Left weight -->
+  <rect x="50" y="85" width="15" height="30" fill="#F73718" rx="3"/>
+  <rect x="45" y="80" width="25" height="10" fill="#F73718" rx="2"/>
+  <rect x="45" y="110" width="25" height="10" fill="#F73718" rx="2"/>
+  
+  <!-- Bar -->
+  <rect x="65" y="97" width="70" height="6" fill="#F73718" rx="3"/>
+  
+  <!-- Right weight -->
+  <rect x="135" y="85" width="15" height="30" fill="#F73718" rx="3"/>
+  <rect x="130" y="80" width="25" height="10" fill="#F73718" rx="2"/>
+  <rect x="130" y="110" width="25" height="10" fill="#F73718" rx="2"/>
+  
+  <!-- Star accents at top -->
+  <polygon points="100,35 103,43 111,43 105,48 107,56 100,51 93,56 95,48 89,43 97,43" fill="#F73718"/>
+</svg>

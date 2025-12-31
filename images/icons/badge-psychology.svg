@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Badge circle background -->
+  <circle cx="100" cy="100" r="90" fill="none" stroke="#F73718" stroke-width="4"/>
+  
+  <!-- Inner badge circle -->
+  <circle cx="100" cy="100" r="75" fill="none" stroke="#F73718" stroke-width="2"/>
+  
+  <!-- Graduation cap -->
+  <!-- Cap top (mortarboard) -->
+  <polygon points="100,70 70,80 70,85 130,85 130,80" fill="#F73718"/>
+  
+  <!-- Cap base -->
+  <path d="M 80 85 Q 80 95 80 100 L 120 100 Q 120 95 120 85" fill="#F73718"/>
+  
+  <!-- Tassel -->
+  <line x1="115" y1="75" x2="125" y2="65" stroke="#F73718" stroke-width="2"/>
+  <circle cx="125" cy="62" r="3" fill="#F73718"/>
+  
+  <!-- Book icon below cap -->
+  <rect x="85" y="105" width="30" height="20" fill="none" stroke="#F73718" stroke-width="3" rx="2"/>
+  <line x1="100" y1="105" x2="100" y2="125" stroke="#F73718" stroke-width="2"/>
+  <line x1="85" y1="112" x2="115" y2="112" stroke="#F73718" stroke-width="1.5"/>
+  <line x1="85" y1="118" x2="115" y2="118" stroke="#F73718" stroke-width="1.5"/>
+  
+  <!-- Star accents at top -->
+  <polygon points="100,35 103,43 111,43 105,48 107,56 100,51 93,56 95,48 89,43 97,43" fill="#F73718"/>
+</svg>
