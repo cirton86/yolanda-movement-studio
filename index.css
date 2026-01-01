@@ -1299,6 +1299,18 @@ section + section {
 
 .nav-link.active {
   color: #F73718;
+
+
+/* Secondary navigation link - less prominent */
+.nav-link-secondary {
+       color: var(--color-text-secondary);
+       font-weight: 400;
+       opacity: 0.8;
+}
+
+   .nav-link-secondary:hover {
+          opacity: 1;
+   }
 }
 
 .nav-link.active::after {
