@@ -3483,5 +3483,274 @@ ul li::before {
     }
 }
 keyframes spin {
+
+/* ============================================
+   MAGAZINE-STYLE LAYOUT & SPACING IMPROVEMENTS
+   Premium visual hierarchy and breathing room
+   ============================================ */
+
+/* Section Spacing - Add breathing room */
+.section {
+    padding: 5rem 0;
+}
+
+.section:first-of-type {
+    padding-top: 3rem;
+}
+
+/* Container Max-Width for Readability */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Typography Improvements */
+.h1, h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.02em;
+}
+
+.h2, h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.section-intro {
+    font-size: 1.25rem;
+    max-width: 700px;
+    margin: 0 auto 3rem;
+    text-align: center;
+    opacity: 0.9;
+}
+
+/* Hero Section Enhancements */
+.hero {
+    position: relative;
+    min-height: 700px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hero-inner {
+    position: relative;
+    z-index: 10;
+}
+
+.hero-copy {
+    max-width: 700px;
+}
+
+.hero-benefits {
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0;
+}
+
+.hero-benefits li {
+    padding: 0.75rem 0;
+    padding-left: 2rem;
+    position: relative;
+    font-size: 1.1rem;
+}
+
+.hero-benefits li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--color-accent);
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+
+.hero-ctas {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+/* Cards & Elevated Elements */
+.card {
+    background: var(--color-bg-card);
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+                0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2),
+                0 4px 6px -2px rgba(0, 0, 0, 0.1);
+}
+
+/* Grid Layouts */
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+/* Program & Testimonial Cards */
+.program-card,
+.testimonial-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.program-card h3,
+.testimonial-card blockquote {
+    margin-bottom: 1rem;
+}
+
+.program-card ul {
+    flex-grow: 1;
+    margin: 1.5rem 0;
+}
+
+.program-card .link-arrow {
+    margin-top: auto;
+    display: inline-flex;
+    align-items: center;
+    font-weight: 600;
+    color: var(--color-accent);
+    text-decoration: none;
+    transition: gap 0.3s ease;
+    gap: 0.5rem;
+}
+
+.program-card .link-arrow:hover {
+    gap: 1rem;
+}
+
+/* List Styling */
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+ul li {
+    padding-left: 1.5rem;
+    position: relative;
+    margin-bottom: 0.75rem;
+}
+
+ul li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--color-accent);
+    font-weight: 700;
+}
+
+.check-list li::before {
+    content: '✓';
+}
+
+.x-list li::before {
+    content: '✗';
+}
+
+/* Button Improvements */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.btn-lg {
+    padding: 1.25rem 2.5rem;
+    font-size: 1.1rem;
+}
+
+.btn-primary {
+    background: var(--color-accent);
+    color: white;
+    border-color: var(--color-accent);
+}
+
+.btn-primary:hover {
+    background: var(--color-accent-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(247, 55, 24, 0.3);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--color-accent);
+    border-color: var(--color-accent);
+}
+
+.btn-secondary:hover {
+    background: var(--color-accent);
+    color: white;
+}
+
+/* Image Enhancements */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.rounded-image {
+    border-radius: 1rem;
+}
+
+.shadow-image {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3),
+                0 10px 10px -5px rgba(0, 0, 0, 0.2);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .section {
+        padding: 3rem 0;
+    }
+
+    .container {
+        padding: 0 1.5rem;
+    }
+
+    .hero {
+        min-height: 600px;
+    }
+
+    .hero-ctas {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .grid-2,
+    .grid-3 {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
+
   to { transform: rotate(360deg); }
 }
