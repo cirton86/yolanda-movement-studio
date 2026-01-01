@@ -351,7 +351,7 @@ p, .text-content {
 .p-6 { padding: var(--spacing-6); }
 .p-8 { padding: var(--spacing-8); }
 .py-8 { padding-top: var(--spacing-8); padding-bottom: var(--spacing-8); }
-.py-hero { padding-top: 160px; padding-bottom: 60px; }
+.py-hero { padding-top: 80px; padding-bottom: 60px; }
 .px-3 { padding-left: var(--spacing-3); padding-right: var(--spacing-3); }
 .px-4 { padding-left: var(--spacing-4); padding-right: var(--spacing-4); }
 .gap-2 { gap: var(--spacing-2); }
@@ -1311,22 +1311,31 @@ section + section {
 
 .nav-link.active {
   color: #F73718;
-
-
-/* Secondary navigation link - less prominent */
-.nav-link-secondary {
-       color: var(--color-text-secondary);
-       font-weight: 400;
-       opacity: 0.8;
-}
-
-   .nav-link-secondary:hover {
-          opacity: 1;
-   }
 }
 
 .nav-link.active::after {
   width: 100%;
+}
+
+/* Elegant CTA in navigation - subtle but distinct */
+.nav-link-cta {
+  color: #FFFFFF !important;
+  background: linear-gradient(135deg, rgba(247, 55, 24, 0.15) 0%, rgba(255, 77, 46, 0.15) 100%);
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: 1px solid rgba(247, 55, 24, 0.3);
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.nav-link-cta::after {
+  display: none; /* Remove underline effect */
+}
+
+.nav-link-cta:hover {
+  background: linear-gradient(135deg, rgba(247, 55, 24, 0.25) 0%, rgba(255, 77, 46, 0.25) 100%);
+  border-color: rgba(247, 55, 24, 0.5);
+  transform: translateY(-1px);
 }
 
 /* Mobile Menu Toggle */
