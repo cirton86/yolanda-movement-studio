@@ -65,12 +65,7 @@ class YolandaAI {
   createWidget() {
     const widgetHTML = `
       <div class="ai-widget" id="ai-widget">
-        <div class="ai-widget-label">Ask Yolanda AI</div>
-        <button class="ai-launcher" id="ai-launcher" aria-label="Open Ask Yolanda AI chat">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-          </svg>
-        </button>
+        <!-- Floating Launcher Removed -->
         
         <div class="ai-chat-window" id="ai-chat-window">
           <div class="ai-chat-header">
@@ -113,6 +108,38 @@ class YolandaAI {
     `;
 
     document.body.insertAdjacentHTML('beforeend', widgetHTML);
+    
+    // Inject Footer Trigger
+    this.injectFooterTrigger();
+  }
+
+  /**
+   * Inject a small help icon into the footer social links area
+   */
+  injectFooterTrigger() {
+    // Target the specific flex container in the footer where social links are
+    // Works across all pages since they share the same footer structure
+    const footerContainer = document.querySelector('.footer .flex.gap-4');
+    
+    if (footerContainer) {
+      const triggerBtn = document.createElement('button');
+      // Match the styling of other footer links (text-gray-400 etc)
+      triggerBtn.className = 'text-gray-400 no-underline transition-colors flex items-center gap-2 font-sm hover-accent bg-transparent border-0 cursor-pointer';
+      triggerBtn.id = 'ai-footer-trigger';
+      triggerBtn.innerHTML = `
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+        </svg>
+        Ask AI
+      `;
+      
+      triggerBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        this.toggleChat();
+      });
+      
+      footerContainer.appendChild(triggerBtn);
+    }
   }
 
   /**
