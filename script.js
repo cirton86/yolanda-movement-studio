@@ -47,18 +47,36 @@ document.addEventListener('DOMContentLoaded', () => {
 // ============================================
 function initOptimizedScroll() {
   let tick = false;
+  const hero = document.querySelector('.section-hero') || document.body;
+  const backToTopBtn = document.querySelector('[aria-label="Back to top"]');
+  const progressBar = document.querySelector('.scroll-progress-bar');
 
   window.addEventListener('scroll', () => {
     if (!tick) {
       window.requestAnimationFrame(() => {
         const scrollY = window.scrollY;
+        const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
         
-        // Call decoupled update functions
+        // Call all scroll-dependent functions
         updateActiveNavLink();
         updateHeroParallax();
         
-        // Note: BackToTop and ProgressBar have their own lightweight listeners
-        // which could be moved here but are less critical.
+        // Back to top button
+        if (backToTopBtn) {
+          if (scrollY > window.innerHeight * 0.5) {
+            backToTopBtn.style.opacity = '1';
+            backToTopBtn.style.pointerEvents = 'all';
+          } else {
+            backToTopBtn.style.opacity = '0';
+            backToTopBtn.style.pointerEvents = 'none';
+          }
+        }
+        
+        // Progress bar
+        if (progressBar && windowHeight > 0) {
+          const scrolled = (scrollY / windowHeight) * 100;
+          progressBar.style.width = scrolled + '%';
+        }
         
         tick = false;
       });
@@ -97,17 +115,8 @@ function initBackToTop() {
   backToTop.innerHTML = '↑';
   backToTop.style.cssText = 'position: fixed; bottom: 100px; right: 30px; width: 50px; height: 50px; border-radius: 50%; background: var(--color-accent); color: white; border: none; font-size: 24px; cursor: pointer; opacity: 0; transition: opacity 0.3s, transform 0.3s; z-index: 1000; box-shadow: 0 4px 12px rgba(0,0,0,0.3); display: flex; align-items: center; justify-content: center;';
   backToTop.setAttribute('aria-label', 'Back to top');
+  backToTop.classList.add('scroll-progress-bar');
   document.body.appendChild(backToTop);
-
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > window.innerHeight * 0.5) {
-      backToTop.style.opacity = '1';
-      backToTop.style.pointerEvents = 'all';
-    } else {
-      backToTop.style.opacity = '0';
-      backToTop.style.pointerEvents = 'none';
-    }
-  });
 
   backToTop.addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -122,16 +131,9 @@ function initBackToTop() {
 // ============================================
 function initScrollProgressBar() {
   const progressBar = document.createElement('div');
+  progressBar.className = 'scroll-progress-bar';
   progressBar.style.cssText = 'position: fixed; top: 0; left: 0; width: 0%; height: 3px; background: var(--color-accent); z-index: 9999; transition: width 0.1s;';
   document.body.appendChild(progressBar);
-
-  window.addEventListener('scroll', () => {
-    const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    // Prevent division by zero
-    if (windowHeight <= 0) return;
-    const scrolled = (window.scrollY / windowHeight) * 100;
-    progressBar.style.width = scrolled + '%';
-  });
 }
 
 // ============================================
@@ -143,7 +145,7 @@ function initScrollProgressBar() {
 // ============================================
 function initMobileMenu() {
   const menuToggle = document.querySelector('.menu-toggle');
-  const navLinks = document.querySelector('.nav-links');
+  const navLinks = document.querySelector('.nav-links, .nav-list');
   const navLinkItems = document.querySelectorAll('.nav-link');
 
   if (!menuToggle || !navLinks) return;
@@ -166,7 +168,7 @@ function initMobileMenu() {
 
   // Close menu when clicking outside
   document.addEventListener('click', (e) => {
-    if (!e.target.closest('.nav') && navLinks.classList.contains('active')) {
+    if (!e.target.closest('.header') && navLinks.classList.contains('active')) {
       navLinks.classList.remove('active');
       menuToggle.setAttribute('aria-expanded', 'false');
     }
@@ -802,20 +804,20 @@ document.addEventListener('DOMContentLoaded', function() {
   
   if (!modal) return; // Exit if modal doesn't exist
   
-  // Add click handlers to all clickable images
-  const clickableImages = document.querySelectorAll('.clickable-image');
+  // Add click handlers to all clickable images and floating images
+  const clickableImages = document.querySelectorAll('.clickable-image, .open-modal');
   
   clickableImages.forEach(image => {
     image.addEventListener('click', function() {
-      const imageSrc = this.querySelector('img').src;
-      const messageKey = this.dataset.message;
-      const message = inspiringMessages[messageKey];
+      const imageSrc = this.dataset.image || this.src;
+      const messageTitle = this.dataset.title || 'Strength in Movement';
+      const messageText = this.dataset.message || inspiringMessages.strength.message;
       
       // Set modal content
       modalImage.src = imageSrc;
-      modalImage.alt = message.title;
-      modalTitle.textContent = message.title;
-      modalInspiration.textContent = message.message;
+      modalImage.alt = messageTitle;
+      modalTitle.textContent = messageTitle;
+      modalInspiration.textContent = messageText;
       
       // Show modal
       modal.classList.add('active');
@@ -848,6 +850,11 @@ document.addEventListener('DOMContentLoaded', function() {
   });
   
   // Scroll reveal observer for floating images
+  const floatingImageObserverOptions = {
+    threshold: 0.2,
+    rootMargin: '0px 0px -50px 0px'
+  };
+  
   const scrollRevealObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -855,10 +862,7 @@ document.addEventListener('DOMContentLoaded', function() {
         scrollRevealObserver.unobserve(entry.target); // Only reveal once
       }
     });
-  }, {
-    threshold: 0.2,
-    rootMargin: '0px 0px -50px 0px'
-  });
+  }, floatingImageObserverOptions);
   
   // Observe all elements with scroll-reveal data attribute
   const scrollRevealElements = document.querySelectorAll('[data-scroll-reveal]');

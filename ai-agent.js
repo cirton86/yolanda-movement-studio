@@ -29,6 +29,9 @@ class YolandaAI {
     this.createWidget();
     this.attachEventListeners();
     
+    // Show loading state
+    this.addMessage('Initializing AI assistant...', 'ai', false);
+    
     // Initialize conversation session
     this.session = new ConversationSession();
     
@@ -38,6 +41,12 @@ class YolandaAI {
       const initialized = await this.engine.initialize();
       
       if (initialized) {
+        // Clear loading message
+        const messagesContainer = document.getElementById('ai-chat-messages');
+        if (messagesContainer) {
+          messagesContainer.innerHTML = '';
+        }
+        
         // Start chat with existing conversation history
         this.engine.startChat(this.session.getMessages());
         
@@ -65,7 +74,14 @@ class YolandaAI {
   createWidget() {
     const widgetHTML = `
       <div class="ai-widget" id="ai-widget">
-        <!-- Floating Launcher Removed -->
+        <!-- Elegant Floating Launcher -->
+        <button class="ai-launcher" id="ai-launcher" aria-label="Open AI chat assistant">
+          <svg class="ai-launcher-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+            <path d="M8 10h.01M12 10h.01M16 10h.01" stroke-linecap="round"></path>
+          </svg>
+          <span class="ai-launcher-text">Ask Yolanda AI</span>
+        </button>
         
         <div class="ai-chat-window" id="ai-chat-window">
           <div class="ai-chat-header">

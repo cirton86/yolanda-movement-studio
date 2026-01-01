@@ -12,26 +12,31 @@
   font-family: var(--font-family-primary);
 }
 
-/* Widget Launcher Button */
+/* Widget Launcher Button - Elegant Expanded Style */
 .ai-launcher {
-  width: 64px;
-  height: 64px;
-  border-radius: 50%;
+  height: 56px;
+  padding: 0 24px;
+  border-radius: 28px;
   background: linear-gradient(135deg, #F73718 0%, #FF4D2E 100%);
   color: #FFFFFF;
   border: none;
-  box-shadow: 0 4px 16px rgba(247, 55, 24, 0.4);
+  box-shadow: 0 4px 20px rgba(247, 55, 24, 0.3), 0 1px 3px rgba(0, 0, 0, 0.2);
   cursor: pointer;
   display: flex;
   align-items: center;
-  justify-content: center;
+  gap: 12px;
   transition: all var(--duration-medium) var(--ease-smooth);
   position: relative;
+  backdrop-filter: blur(10px);
 }
 
 .ai-launcher:hover {
-  transform: scale(1.1);
-  box-shadow: 0 8px 32px rgba(247, 55, 24, 0.6);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(247, 55, 24, 0.5), 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.ai-launcher:active {
+  transform: translateY(0);
 }
 
 .ai-launcher.hidden {
@@ -39,21 +44,29 @@
 }
 
 .ai-launcher.pulse {
-  animation: pulse 2s infinite;
+  animation: elegantPulse 3s infinite;
 }
 
-@keyframes pulse {
+@keyframes elegantPulse {
   0%, 100% {
-    box-shadow: 0 4px 16px rgba(247, 55, 24, 0.4);
+    box-shadow: 0 4px 20px rgba(247, 55, 24, 0.3), 0 1px 3px rgba(0, 0, 0, 0.2);
   }
   50% {
-    box-shadow: 0 4px 24px rgba(247, 55, 24, 0.8), 0 0 0 8px rgba(247, 55, 24, 0.2);
+    box-shadow: 0 4px 30px rgba(247, 55, 24, 0.6), 0 0 0 8px rgba(247, 55, 24, 0.1);
   }
 }
 
-.ai-launcher svg {
-  width: 28px;
-  height: 28px;
+.ai-launcher-icon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.ai-launcher-text {
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  white-space: nowrap;
 }
 
 /* Widget Label */
@@ -441,11 +454,18 @@
   .ai-launcher {
     width: 56px;
     height: 56px;
+    padding: 0;
+    border-radius: 50%;
+    justify-content: center;
   }
-
-  .ai-launcher svg {
-    width: 24px;
-    height: 24px;
+  
+  .ai-launcher-text {
+    display: none;
+  }
+  
+  .ai-launcher-icon {
+    width: 26px;
+    height: 26px;
   }
   
   .ai-widget-label,
