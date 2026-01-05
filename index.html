@@ -142,11 +142,14 @@
   <section class="hero-portrait" id="main-content">
     <div class="container">
       <div class="grid grid-2 items-center gap-12 py-20">
-        <div class="reveal w-full-mobile">
-          <img src="images/gallery/img1.png" 
+        <!-- Hero Image (No Reveal Animation for Immediate mobile load) -->
+        <div class="w-full-mobile">
+          <img src="images/yolanda-hero-bw.jpg" 
                alt="Yolanda Reinert - NASM Certified Personal Trainer" 
-               class="hero-image open-modal"
-               data-image="images/gallery/img1.png"
+               class="hero-image open-modal shadow-2xl rounded-xl"
+               style="width: 100%; height: auto; object-fit: cover; aspect-ratio: 4/5;"
+               loading="eager"
+               data-image="images/yolanda-hero-bw.jpg"
                data-title="Meet Yolanda"
                data-message="Strength, mobility, and longevity.">
         </div>
