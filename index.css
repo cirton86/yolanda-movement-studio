@@ -10,7 +10,7 @@
   --color-bg-elevated: #151515; /* Card Background */
   --color-bg-overlay: rgba(10, 10, 10, 0.85); /* Slightly more transparent for glass effect */
   
-  --color-accent: #FF6B35;
+  --color-accent: #FF2D00;
   --color-accent-hover: #E65100;
   
   --color-text-primary: #FFFFFF;
@@ -312,7 +312,7 @@ img { max-width: 100%; height: auto; display: block; }
 
 /* PRIMARY CTA - Maximum Visual Dominance */
 .btn-primary {
-  background: linear-gradient(135deg, #FF6B35 0%, #FF8C42 100%);
+  background: linear-gradient(135deg, #FF2D00 0%, #FF5A36 100%);
   color: white;
   font-weight: 700;
   box-shadow: 0 8px 24px rgba(255, 107, 53, 0.4);
@@ -348,14 +348,14 @@ img { max-width: 100%; height: auto; display: block; }
 /* SECONDARY CTA - Lighter Visual Weight */
 .btn-secondary {
   background: transparent;
-  color: #FF6B35;
-  border: 2px solid #FF6B35;
+  color: #FF2D00;
+  border: 2px solid #FF2D00;
   font-weight: 600;
   transition: all 0.3s ease;
 }
 
 .btn-secondary:hover {
-  background: #FF6B35;
+  background: #FF2D00;
   color: white;
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(255, 107, 53, 0.3);
@@ -573,7 +573,7 @@ footer {
 
 .email-form .form-input:focus {
     outline: none;
-    border-color: #FF6B35;
+    border-color: #FF2D00;
     box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.1);
 }
 

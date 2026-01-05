@@ -4,7 +4,6 @@
 .env
 .env.local
 .env.production
-api-config.js
 
 ## Node modules
 node_modules/
