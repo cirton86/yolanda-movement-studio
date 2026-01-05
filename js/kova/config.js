@@ -3,10 +3,10 @@ export const KOVA_CONFIG = {
   // IDENTITY & ROLE 
   // ==================================================
   identity: {
-    brandName: "Kova Digital AI",
+    brandName: "Yolanda Reinert",
     businessName: "Yolanda Movement Studio",
     industry: "Fitness / Training / Coaching",
-    roleTitle: "Performance Intake Specialist", // Detected role for Fitness
+    roleTitle: "Owner & Movement Specialist",
     poweredBy: "Powered by Kova Digital AI"
   },
 
