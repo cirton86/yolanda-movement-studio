@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yolanda R. | Movement & Longevity</title>
+    <meta name="description" content="Premium longevity and strength training for adults 40+. Chicago-based movement studio specializing in joint health, mobility, and functional hypertrophy.">
+    
+    <!-- Google Fonts: Cormorant Garamond & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="ai-widget.css">
+</head>
+<body>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar" aria-label="Main Navigation">
+        <div class="container nav-container">
+            <a href="index.html" class="logo" aria-label="Yolanda R. Movement Studio Home">
+                Yolanda R.
+                <span>Movement Studio</span>
+            </a>
+            
+            <div class="nav-links">
+                <a href="index.html" class="active" aria-current="page">Home</a>
+                <a href="about.html">About</a>
+                <a href="programs.html">Programs</a>
+                <a href="results.html">Results</a>
+                <a href="contact.html" style="color: var(--color-accent);">Contact</a>
+            </div>
+            
+            <button class="mobile-toggle text-white md:hidden" aria-label="Open Mobile Menu">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="relative h-screen flex items-center justify-center overflow-hidden">
+        <!-- Background Image -->
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0 bg-black/70 z-10"></div> <!-- Darker Overlay for Text Contrast -->
+            <!-- Use a reliable backup image until new ones are uploaded -->
+            <img src="images/yolanda-professional/window-light-kneeling.jpg" 
+                 onerror="this.src='https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=2070&auto=format&fit=crop'" 
+                 alt="Yolanda Movement Training Environment" 
+                 class="w-full h-full object-cover">
+        </div>
+        
+        <div class="container relative z-20 text-center reveal">
+            <!-- Added break tags and responsive utilities to ensure visibility on mobile -->
+            <h1 class="text-white mb-6">
+                <span class="gradient-text">Move Stronger.</span><br>
+                <span class="gradient-text">Live Longer.</span>
+            </h1>
+            <p class="text-xl text-gray-300 mx-auto mb-6 text-center-mobile max-w-2xl">
+                Premium longevity and strength training for adults 40+. <br class="hide-on-mobile">
+                Reclaim your capability with clinical-grade protocols.
+            </p>
+            <ul class="text-gray-200 mb-8 max-w-xl mx-auto text-left list-none space-y-2">
+                <li class="flex items-center gap-2 justify-center sm:justify-start">
+                    <i data-lucide="check" class="w-5 h-5 text-accent flex-shrink-0"></i>
+                    <span>Climb stairs without grabbing the railing</span>
+                </li>
+                <li class="flex items-center gap-2 justify-center sm:justify-start">
+                    <i data-lucide="check" class="w-5 h-5 text-accent flex-shrink-0"></i>
+                    <span>Get off the floor without help</span>
+                </li>
+                <li class="flex items-center gap-2 justify-center sm:justify-start">
+                    <i data-lucide="check" class="w-5 h-5 text-accent flex-shrink-0"></i>
+                    <span>Play with your grandkids without worrying about your knees</span>
+                </li>
+            </ul>
+            <div class="flex justify-center gap-4 flex-col sm:flex-row">
+                <a href="contact.html" class="btn btn-primary w-full-mobile">Book Your Free Assessment</a>
+                <a href="#mobility-checklist" class="btn btn-outline w-full-mobile">Get the 5-Minute Mobility Checklist</a>
+            </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- TRUST STRIP / CERTIFICATIONS -->
+    <section class="py-8 border-b border-gray-800" style="background: #0f0f0f;">
+        <div class="container text-center">
+            <p class="text-gray-400 font-sm uppercase tracking-wider mb-6">Trusted Certifications & Experience</p>
+            <div class="flex flex-wrap justify-center gap-8 items-center">
+                <span class="text-gray-400 font-bold border border-gray-600 rounded px-4 py-2 text-sm tracking-wider hover:text-accent hover:border-accent transition-all">NASM CERTIFIED</span>
+                <span class="text-gray-400 font-bold border border-gray-600 rounded px-4 py-2 text-sm tracking-wider hover:text-accent hover:border-accent transition-all">PILATES INSTRUCTOR</span>
+                <span class="text-gray-400 font-bold border border-gray-600 rounded px-4 py-2 text-sm tracking-wider hover:text-accent hover:border-accent transition-all">YOGA INSTRUCTOR</span>
+                <span class="text-gray-400 font-bold border border-gray-600 rounded px-4 py-2 text-sm tracking-wider hover:text-accent hover:border-accent transition-all">B.A. PSYCHOLOGY</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- INTRO SECTION (Gallery Style) -->
+    <section class="section bg-black">
+        <div class="container">
+            <div class="grid grid-2 items-center gap-12">
+                <div class="reveal">
+                    <h2 class="text-white">Not Just Exercise.<br><span class="text-accent">Intelligent Movement.</span></h2>
+                    <p class="mb-6">
+                        The fitness industry sells exhaustion. I sell capability. Using clinical-grade protocols and longevity science, we build bodies that don't just look good—they function flawlessly for decades.
+                    </p>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center gap-3" style="color: var(--color-text-secondary);">
+                            <i data-lucide="check" class="text-accent"></i> Joint-friendly strength methodology
+                        </li>
+                        <li class="flex items-center gap-3" style="color: var(--color-text-secondary);">
+                            <i data-lucide="check" class="text-accent"></i> Personalized biomechanics assessment
+                        </li>
+                        <li class="flex items-center gap-3" style="color: var(--color-text-secondary);">
+                            <i data-lucide="check" class="text-accent"></i> Evidence-based longevity protocols
+                        </li>
+                    </ul>
+                    <a href="about.html" class="btn btn-outline">Meet Yolanda</a>
+                </div>
+                
+                <div class="gallery-grid reveal">
+                    <!-- A mini gallery of 2 images -->
+                    <div class="gallery-item">
+                        <img src="images/yolanda-professional/portrait-leaning.jpg" 
+                             onerror="this.src='https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?q=80&w=2070&auto=format&fit=crop'"
+                             alt="Yolanda Portrait">
+                    </div>
+                    <div class="gallery-item" style="margin-top: 40px;">
+                        <img src="images/yolanda-professional/lunge-dumbbell.jpg" 
+                             onerror="this.src='https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=2070&auto=format&fit=crop'"
+                             alt="Yolanda Training Lunge">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SELECTED PROGRAMS PREVIEW -->
+    <section class="section" style="background: #0f0f0f; border-top: 1px solid var(--color-border);">
+        <div class="container">
+            <div class="text-center mb-16 reveal">
+                <h2>Curated Pathways</h2>
+                <p class="mx-auto">Programs designed to meet you exactly where you are.</p>
+            </div>
+            
+            <div class="grid grid-3">
+                <div class="card gradient-card-bg shadow-premium transition-premium hover-lift reveal">
+                    <i data-lucide="activity" class="text-accent w-10 h-10 mb-6"></i>
+                    <h3 class="mb-2">Longevity Strength</h3>
+                    <p class="mb-6">Build a chassis that lasts. Functional hypertrophy and mobility focused on joint health.</p>
+                    <a href="programs.html" class="text-accent font-semibold uppercase text-sm tracking-widest hover:text-white transition-colors flex items-center gap-2">
+                        See Details <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+                <div class="card gradient-card-bg shadow-premium transition-premium hover-lift reveal" style="transition-delay: 0.1s">
+                    <i data-lucide="heart-handshake" class="text-accent w-10 h-10 mb-6"></i>
+                    <h3 class="mb-2">Rebuild & Return</h3>
+                    <p class="mb-6">The bridge from Physical Therapy to performance. Safely progress from injury to independence.</p>
+                    <a href="programs.html" class="text-accent font-semibold uppercase text-sm tracking-widest hover:text-white transition-colors flex items-center gap-2">
+                        See Details <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+                <div class="card gradient-card-bg shadow-premium transition-premium hover-lift reveal" style="transition-delay: 0.2s">
+                    <i data-lucide="trending-up" class="text-accent w-10 h-10 mb-6"></i>
+                    <h3 class="mb-2">Performance Prep</h3>
+                    <p class="mb-6">Elite conditioning for HYROX, marathons, or alpine objectives. Optimize your engine.</p>
+                    <a href="programs.html" class="text-accent font-semibold uppercase text-sm tracking-widest hover:text-white transition-colors flex items-center gap-2">
+                        See Details <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <span class="logo mb-4 block text-3xl">Yolanda R.</span>
+            
+            <div class="social-links">
+                <a href="#" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+                <a href="#" aria-label="Email"><i data-lucide="mail"></i></a>
+                <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+            </div>
+            
+            <p class="footer-text">&copy; 2025 Yolanda Reinert. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script type="module" src="ai-agent.js"></script>
+    <script>
+        // Initialize Icons
+        lucide.createIcons();
+    </script>
+</body>
+</html>

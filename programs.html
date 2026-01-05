@@ -1,430 +1,277 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="dns-prefetch" href="//fonts.googleapis.com">
-  <link rel="dns-prefetch" href="//fonts.gstatic.com">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  <meta name="description" content="Explore Movement & Longevity training programs: Longevity Strength, Rebuild & Return (Post-PT), and Performance Prep.">
-  <title>Training Programs | Yolanda R. - Movement & Longevity Coach</title>
-  
-  <!-- Preload Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="index.css">
-  <link rel="stylesheet" href="ai-widget.css">
-  
-  <script type="module" src="ai-agent.js"></script>
-  <script src="script.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programs | Yolanda R. Movement Studio</title>
+    <meta name="description" content="Explore Movement & Longevity training programs: Longevity Strength, Rebuild & Return (Post-PT), and Performance Prep.">
+    
+    <!-- Google Fonts: Cormorant Garamond & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="ai-widget.css">
+    <script type="module" src="ai-agent.js"></script>
 </head>
 <body>
-  
-  <!-- Skip Navigation Link for Accessibility -->
-  <a href="#main-content" class="skip-link">Skip to main content</a>
-  
-  
-  <!-- NAVIGATION -->
-  <header class="header">
-    <nav class="nav container">
-      <a href="index.html" class="logo">
-        <div class="logo-main">Yolanda R.</div>
-        <div class="logo-tagline">Movement & Longevity Training</div>
-      </a>
-      
-      <button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">
-        ☰
-      </button>
-      
-      <ul class="nav-links" id="nav-links" role="navigation" aria-label="Main navigation">
-        <li><a href="index.html" class="nav-link">Home</a></li>
-        <li><a href="about.html" class="nav-link">About</a></li>
-        <li><a href="programs.html" class="nav-link active">Programs</a></li>
-        <li><a href="movement-library.html" class="nav-link">Movement Library</a></li>
-        <li><a href="results.html" class="nav-link">Results</a></li>
-        <li><a href="faq.html" class="nav-link">FAQ</a></li>
-        <li><a href="contact.html" class="nav-link">Contact</a></li>
-        <li><a href="mailto:myofitpt@gmail.com" class="btn btn-secondary btn-nav">Email Yolanda</a></li>
-        <li><a href="https://calendar.google.com/calendar/u/0/r?hl=en&pli=1" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-nav">Book Assessment</a></li>
-      </ul>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar" aria-label="Main Navigation">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <div class="logo-main">MYOFIT</div>
+                <div class="logo-tagline">Movement & Longevity Training</div>
+            </a>
+            
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="programs.html" class="active" aria-current="page">Programs</a>
+                <a href="results.html">Results</a>
+                <a href="movement-library.html">Library</a>
+                <a href="thank-you.html">Thank You</a>
+                <a href="faq.html">FAQ</a>
+                <a href="contact.html" class="text-accent">Contact</a>
+            </div>
+            
+            <button class="mobile-toggle text-white md:hidden" aria-label="Open Mobile Menu">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
     </nav>
-  </header>
 
-  <!-- HERO HEADER -->
-  <section class="section bg-charcoal py-hero" id="main-content">
-    <div class="container text-center">
-      <h1 class="h1 mb-4 text-white">Training Programs</h1>
-      <p class="text-large text-gray-300 max-w-700 mx-auto">
-        Personalized coaching designed for your body, your history, and your goals. 
-        Choose the path that fits your life stage.
-      </p>
-    </div>
-  </section>
-
-  <!-- DETAILED PROGRAM PAGES SECTION -->
-  <section class="section bg-charcoal" id="program-details">
-    <div class="container">
-      <div class="max-w-1000 mx-auto">
-        
-        <!-- Program 1: Longevity Strength Training Details -->
-        <div class="faq-item reveal" class="mb-4">
-          <button class="faq-question" class="bg-gray-900 border">
-            <span class="text-lg font-semibold">Longevity Strength Training - Full Details</span>
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer">
-            <div class="p-6 bg-gray-900 border border-t-0">
-              
-              <!-- Who It's For -->
-              <h4 class="h5 mb-3 text-accent">Who This Program Is For</h4>
-              <p class="text-gray-300 mb-4 leading-relaxed">
-                This program is designed for adults who want to feel strong, capable, and confident in their bodies without the pressure of aesthetics-focused training. You might be:
-              </p>
-              <ul class="text-gray-300 mb-6 leading-relaxed pl-4">
-                <li>Adults 40+ who want functional strength for daily life</li>
-                <li>People managing chronic pain (low back, knees, shoulders)</li>
-                <li>Those who feel intimidated by traditional gym environments</li>
-                <li>Anyone prioritizing long-term health over short-term intensity</li>
-                <li>Individuals who've been told they're "too old" to start strength training</li>
-              </ul>
-              
-              <!-- Common Starting Points -->
-              <h4 class="h5 mb-3 text-accent">Common Starting Points</h4>
-              <div class="grid grid-cols-auto-fit-minmax-250px-1fr gap-3 mb-6">
-                <div class="p-3 bg-charcoal rounded border">
-                  <p class="text-gray-300 font-sm m-0">"I have a stiff low back and want to move without fear"</p>
-                </div>
-                <div class="p-3 bg-charcoal rounded border">
-                  <p class="text-gray-300 font-sm m-0">"I want to stay active as I age, not slow down"</p>
-                </div>
-                <div class="p-3 bg-charcoal rounded border">
-                  <p class="text-gray-300">
-              Tailored program based on your goals, schedule, and abilities. You'll know what we're working on, why it matters, and how it connects to your bigger picture.
+    <!-- HERO SECTION (Compact for Subpages) -->
+    <header class="hero-compact">
+        <div class="container relative z-20 text-center reveal active">
+            <h1 class="text-white mb-6">Training Programs</h1>
+            <p class="text-xl text-gray-300 mx-auto mb-10 max-w-2xl">
+                Personalized coaching designed for your body, your history, and your goals. 
+                Choose the path that fits your life stage.
             </p>
-                </div>
-              </div>
-              
-              <!-- What We Do Together -->
-              <h4 class="h5 mb-3 text-accent">What We Do Together</h4>
-              <div class="mb-6">
-                <div style="display: flex; gap: var(--spacing-3); margin-bottom: var(--spacing-3);">
-                  <div style="width: 40px; height: 40px; background: var(--color-accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: white; font-weight: 700;">1</div>
-                  <div>
-                    <h5 style="color: var(--color-gray-900); margin-bottom: 0.5rem; font-size: var(--font-size-base);">Assessment Phase (Weeks 1-2)</h5>
-                    <p style="color: var(--color-gray-400); font-size: var(--font-size-sm); margin: 0;">Movement screening, identify limitations, establish baseline strength, discuss pain patterns and goals</p>
-                  </div>
-                </div>
-                <div style="display: flex; gap: var(--spacing-3); margin-bottom: var(--spacing-3);">
-                  <div style="width: 40px; height: 40px; background: var(--color-accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: white; font-weight: 700;">2</div>
-                  <div>
-                    <h5 style="color: var(--color-gray-900); margin-bottom: 0.5rem; font-size: var(--font-size-base);">Foundation Building (Weeks 3-8)</h5>
-                    <p style="color: var(--color-gray-400); font-size: var(--font-size-sm); margin: 0;">Master fundamental movement patterns, build body awareness, develop technique-first habits, address mobility restrictions</p>
-                  </div>
-                </div>
-                <div style="display: flex; gap: var(--spacing-3);">
-                  <div style="width: 40px; height: 40px; background: var(--color-accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: white; font-weight: 700;">3</div>
-                  <div>
-                    <h5 style="color: var(--color-gray-900); margin-bottom: 0.5rem; font-size: var(--font-size-base);">Progressive Strength (Ongoing)</h5>
-                    <p style="color: var(--color-gray-400); font-size: var(--font-size-sm); margin: 0;">Gradually increase load and complexity, maintain technique focus, continue education on movement principles</p>
-                  </div>
-                </div>
-              </div>
-              
-              <!-- Expected Milestones -->
-              <h4 class="h5 mb-3 text-accent">Expected Milestones</h4>
-              <ul class="text-gray-300 mb-6 leading-relaxed pl-4">
-                <li><strong>30 Days:</strong> Improved body awareness, reduced fear of movement, better understanding of pain signals</li>
-                <li><strong>90 Days:</strong> Noticeable strength gains, reduced chronic pain, improved daily function</li>
-                <li><strong>6+ Months:</strong> Sustained strength, confidence in movement, ability to self-manage minor setbacks</li>
-              </ul>
-              
-              <!-- Program-Specific FAQs -->
-              <h4 class="h5 mb-3 text-accent">Common Questions</h4>
-              <div style="background: var(--color-charcoal); padding: var(--spacing-4); border-radius: var(--border-radius); border: 1px solid var(--color-gray-800);">
-                <p style="color: var(--color-gray-900); font-weight: 600; margin-bottom: 0.5rem; font-size: var(--font-size-sm);">How often do I need to train?</p>
-                <p style="color: var(--color-gray-400); font-size: var(--font-size-sm); margin-bottom: var(--spacing-3);">Most clients see best results with 2 sessions per week. 1 session/week works for maintenance.</p>
-                
-                <p style="color: var(--color-gray-900); font-weight: 600; margin-bottom: 0.5rem; font-size: var(--font-size-sm);">Will this help with my chronic pain?</p>
-                <p style="color: var(--color-gray-400); font-size: var(--font-size-sm); margin: 0;">Many clients experience reduced pain through improved movement patterns and strength. We work with your pain, not against it.</p>
-              </div>
-            </div>
-          </div>
         </div>
-        
-        <!-- Program 2: Rebuild & Return (Post-PT) Details -->
-        <div class="faq-item reveal" class="mb-4">
-          <button class="faq-question" class="bg-gray-900 border">
-            <span class="text-lg font-semibold">Rebuild & Return (Post-PT) - Full Details</span>
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer">
-            <div class="p-6 bg-gray-900 border border-t-0">
-              
-              <!-- Who It's For -->
-              <h4 class="h5 mb-3 text-accent">Who This Program Is For</h4>
-              <p class="text-gray-300 mb-4 leading-relaxed">
-                This program bridges the gap between physical therapy discharge and confident, independent movement. You might be:
-              </p>
-              <ul class="text-gray-300 mb-6 leading-relaxed pl-4">
-                <li>Recently discharged from PT but not feeling fully confident</li>
-                <li>Cleared to exercise but unsure how to progress safely</li>
-                <li>Afraid of reinjury or setbacks</li>
-                <li>Need continued guidance beyond PT's scope</li>
-                <li>Want to return to activities you did before injury</li>
-              </ul>
-              
-              <!-- Common Starting Points -->
-              <h4 class="h5 mb-3 text-accent">Common Starting Points</h4>
-              <div class="grid grid-cols-auto-fit-minmax-250px-1fr gap-3 mb-6">
-                <div class="p-3 bg-charcoal rounded border">
-                  <p class="text-gray-300 font-sm m-0">"PT helped, but I'm still nervous about reinjury"</p>
-                </div>
-                <div class="p-3 bg-charcoal rounded border">
-                  <p class="text-gray-300 font-sm m-0">"I don't know how to progress from PT exercises"</p>
-                </div>
-                <div class="p-3 bg-charcoal rounded border">
-                  <p class="text-gray-300 font-sm m-0">"I want to get back to hiking/sports/activities"</p>
-                </div>
-              </div>
-              
-              <!-- What We Do Together -->
-              <h4 class="h5 mb-3 text-accent">What We Do Together</h4>
-              <div class="mb-6">
-                <div style="display: flex; gap: var(--spacing-3); margin-bottom: var(--spacing-3);">
-                  <div style="width: 40px; height: 40px; background: var(--color-accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: white; font-weight: 700;">1</div>
-                  <div>
-                    <h5 style="color: var(--color-gray-900); margin-bottom: 0.5rem; font-size: var(--font-size-base);">PT Review & Assessment (Week 1)</h5>
-                    <p class="text-gray-300">
-              Assess your movement patterns, discuss your history, and identify where you are versus where you want to be. Understanding your body's reality, not comparing to others.
-            </p>
-                  </div>
-                </div>
-                <div style="display: flex; gap: var(--spacing-3); margin-bottom: var(--spacing-3);">
-                  <div style="width: 40px; height: 40px; background: var(--color-accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: white; font-weight: 700;">2</div>
-                  <div>
-                    <h5 style="color: var(--color-gray-900); margin-bottom: 0.5rem; font-size: var(--font-size-base);">Careful Progression (Weeks 2-12)</h5>
-                    <p style="color: var(--color-gray-400); font-size: var(--font-size-sm); margin: 0;">Continue PT exercises with gradual load increases, add functional movements, build confidence through small wins</p>
-                  </div>
-                </div>
-                <div style="display: flex; gap: var(--spacing-3);">
-                  <div style="width: 40px; height: 40px; background: var(--color-accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: white; font-weight: 700;">3</div>
-                  <div>
-                    <h5 style="color: var(--color-gray-900); margin-bottom: 0.5rem; font-size: var(--font-size-base);">Return to Activity (Ongoing)</h5>
-                    <p style="color: var(--color-gray-400); font-size: var(--font-size-sm); margin: 0;">Gradually reintroduce desired activities, learn to manage minor flare-ups, develop long-term maintenance strategies</p>
-                  </div>
-                </div>
-              </div>
-              
-              <!-- Expected Milestones -->
-              <h4 class="h5 mb-3 text-accent">Expected Milestones</h4>
-              <ul class="text-gray-300 mb-6 leading-relaxed pl-4">
-                <li><strong>30 Days:</strong> Reduced fear of reinjury, successful progression beyond PT exercises</li>
-                <li><strong>90 Days:</strong> Return to modified versions of desired activities, improved confidence</li>
-                <li><strong>6+ Months:</strong> Full return to activities, ability to self-manage minor setbacks</li>
-              </ul>
-              
-              <!-- Program-Specific FAQs -->
-              <h4 class="h5 mb-3 text-accent">Common Questions</h4>
-              <div style="background: var(--color-charcoal); padding: var(--spacing-4); border-radius: var(--border-radius); border: 1px solid var(--color-gray-800);">
-                <p style="color: var(--color-gray-900); font-weight: 600; margin-bottom: 0.5rem; font-size: var(--font-size-sm);">Do I need to bring my PT discharge notes?</p>
-                <p style="color: var(--color-gray-400); font-size: var(--font-size-sm); margin-bottom: var(--spacing-3);">Helpful but not required. We'll assess where you are now and build from there.</p>
-                
-                <p style="color: var(--color-gray-900); font-weight: 600; margin-bottom: 0.5rem; font-size: var(--font-size-sm);">What if I have a setback or flare-up?</p>
-                <p style="color: var(--color-gray-400); font-size: var(--font-size-sm); margin: 0;">We adjust immediately. Setbacks are part of the process, and we'll use them as learning opportunities.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Program 3: Performance Prep Details -->
-        <div class="faq-item reveal" class="mb-4">
-          <button class="faq-question" class="bg-gray-900 border">
-            <span class="text-lg font-semibold">Performance Prep - Full Details</span>
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer">
-            <div class="p-6 bg-gray-900 border border-t-0">
-              
-              <!-- Who It's For -->
-              <h4 class="h5 mb-3 text-accent">Who This Program Is For</h4>
-              <p class="text-gray-300 mb-4 leading-relaxed">
-                This program is for athletes and active individuals training for specific events who want to perform well while protecting their bodies. You might be:
-              </p>
-              <ul class="text-gray-300 mb-6 leading-relaxed pl-4">
-                <li>Training for HYROX, marathons, or obstacle course races</li>
-                <li>Climbers preparing for competitions or big projects</li>
-                <li>Endurance athletes wanting injury prevention</li>
-                <li>Anyone with a specific event goal requiring strength support</li>
-                <li>Athletes who've been injured before and want to train smarter</li>
-              </ul>
-              
-              
-              <!-- Program-Specific FAQs -->
-              <h4 class="h5 mb-3 text-accent">Common Questions</h4>
-              <div style="background: var(--color-charcoal); padding: var(--spacing-4); border-radius: var(--border-radius); border: 1px solid var(--color-gray-800);">
-                <p style="color: var(--color-gray-900); font-weight: 600; margin-bottom: 0.5rem; font-size: var(--font-size-sm);">How does this fit with my existing training?</p>
-                <p style="color: var(--color-gray-400); font-size: var(--font-size-sm); margin-bottom: var(--spacing-3);">We complement your event training, not replace it. Strength work is scheduled around your key workouts.</p>
-                
-                <p style="color: var(--color-gray-900); font-weight: 600; margin-bottom: 0.5rem; font-size: var(--font-size-sm);">When should I start before my event?</p>
-                <p style="color: var(--color-gray-400); font-size: var(--font-size-sm); margin: 0;">Ideally 12-16 weeks out. We can work with shorter timelines, but more time allows better preparation.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-      </div>
-    </div>
-  </section>
+    </header>
 
-  <!-- PRICING PHILOSOPHY SECTION -->
-  <section class="section bg-charcoal">
-    <div class="container">
-      <div class="text-center max-w-700 mx-auto">
-        <h2 class="h2 mb-4 reveal">Investment in Your Longevity</h2>
-        <p class="text-large reveal mb-6 text-gray-300">
-          Pricing depends on program type and session frequency. Every program is customized to your goals, timeline, and needs.
-        </p>
-        
-        <div class="reveal bg-gray-900 rounded p-6 border mb-6">
-          <h3 class="h5 mb-4 text-accent">What's Included in Every Program</h3>
-          <div class="grid-responsive-sm text-center md:text-left">
-            <div class="flex items-start gap-2">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent flex-shrink-0 mt-1">
-                <polyline points="20 6 9 17 4 12"></polyline>
-              </svg>
-              <span class="text-gray-300 font-sm">Personalized movement assessment</span>
-            </div>
-            <div class="flex items-start gap-2">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent flex-shrink-0 mt-1">
-                <polyline points="20 6 9 17 4 12"></polyline>
-              </svg>
-              <span class="text-gray-300 font-sm">Ongoing education & coaching</span>
-            </div>
-            <div class="flex items-start gap-2">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent flex-shrink-0 mt-1">
-                <polyline points="20 6 9 17 4 12"></polyline>
-              </svg>
-              <span class="text-gray-300 font-sm">Technique-first approach</span>
-            </div>
-            <div class="flex items-start gap-2">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent flex-shrink-0 mt-1">
-                <polyline points="20 6 9 17 4 12"></polyline>
-              </svg>
-              <span class="text-gray-300 font-sm">Long-term function focus</span>
-            </div>
-            <div class="flex items-start gap-2">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent flex-shrink-0 mt-1">
-                <polyline points="20 6 9 17 4 12"></polyline>
-              </svg>
-              <span class="text-gray-300 font-sm">Reduced pain & independence</span>
-            </div>
-            <div class="flex items-start gap-2">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent flex-shrink-0 mt-1">
-                <polyline points="20 6 9 17 4 12"></polyline>
-              </svg>
-              <span class="text-gray-300 font-sm">Flexible scheduling</span>
-            </div>
-          </div>
-        </div>
-        
-        <a href="contact.html" class="btn btn-primary btn-large reveal">
-          Schedule a Complimentary Consultation
-        </a>
-      </div>
-    </div>
-  </section>
+    <!-- DETAILED PROGRAM PAGES SECTION -->
+    <section class="section" id="program-details">
+        <div class="container">
+            <div class="container-narrow">
+                
+                <!-- Program 1: Longevity Strength Training Details -->
+                <div class="card reveal mb-8">
+                    <div class="flex flex-col gap-6">
+                        <div class="accordion-trigger flex items-center justify-between">
+                             <div class="flex items-center gap-4">
+                                <i data-lucide="activity" class="text-accent w-8 h-8"></i>
+                                <h2 class="h3 m-0">Longevity Strength Training</h2>
+                            </div>
+                            <i data-lucide="chevron-down" class="icon-chevron"></i>
+                        </div>
+                        
+                        <!-- Content -->
+                        <div class="accordion-content">
+                            <h4 class="h5 mb-3 text-accent mt-6">Who This Program Is For</h4>
+                            <p class="mb-4">
+                                This program is designed for adults who want to feel strong, capable, and confident in their bodies without the pressure of aesthetics-focused training. You might be:
+                            </p>
+                            <ul class="space-y-2 mb-6 pl-4">
+                                <li class="flex items-center gap-2"><i data-lucide="check" class="text-accent w-4 h-4"></i> Adults 40+ who want functional strength for daily life</li>
+                                <li class="flex items-center gap-2"><i data-lucide="check" class="text-accent w-4 h-4"></i> People managing chronic pain (low back, knees, shoulders)</li>
+                                <li class="flex items-center gap-2"><i data-lucide="check" class="text-accent w-4 h-4"></i> Those who feel intimidated by traditional gym environments</li>
+                                <li class="flex items-center gap-2"><i data-lucide="check" class="text-accent w-4 h-4"></i> Anyone prioritizing long-term health over short-term intensity</li>
+                            </ul>
+                            
+                            <h4 class="h5 mb-3 text-accent">What We Do Together</h4>
+                            <div class="space-y-4 mb-6">
+                                <div class="flex gap-4">
+                                    <div class="text-accent font-bold text-xl">01</div>
+                                    <div>
+                                        <h5 class="text-white font-semibold">Assessment Phase (Weeks 1-2)</h5>
+                                        <p class="text-sm">Movement screening, identify limitations, establish baseline strength.</p>
+                                    </div>
+                                </div>
+                                <div class="flex gap-4">
+                                    <div class="text-accent font-bold text-xl">02</div>
+                                    <div>
+                                        <h5 class="text-white font-semibold">Foundation Building (Weeks 3-8)</h5>
+                                        <p class="text-sm">Master fundamental movement patterns, build body awareness.</p>
+                                    </div>
+                                </div>
+                                <div class="flex gap-4">
+                                    <div class="text-accent font-bold text-xl">03</div>
+                                    <div>
+                                        <h5 class="text-white font-semibold">Progressive Strength (Ongoing)</h5>
+                                        <p class="text-sm">Gradually increase load and complexity, maintain technique focus.</p>
+                                    </div>
+                                </div>
+                            </div>
 
-  <!-- CTA -->
-  <section class="section text-center" style="background: var(--color-bg-elevated);">
-    <div class="container">
-      <h2 class="h2 mb-4 reveal">Ready to Start?</h2>
-      <a href="contact.html" class="btn btn-primary btn-large reveal">
-        Begin Your Movement Journey
-      </a>
-    </div>
-  </section>
+                            <a href="contact.html" class="btn btn-primary mt-4">Inquire About This Program</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Program 2: Rebuild & Return -->
+                <div class="card reveal mb-8">
+                     <div class="flex flex-col gap-6">
+                        <div class="accordion-trigger flex items-center justify-between">
+                             <div class="flex items-center gap-4">
+                                <i data-lucide="heart-handshake" class="text-accent w-8 h-8"></i>
+                                <h2 class="h3 m-0">Rebuild & Return (Post-PT)</h2>
+                            </div>
+                            <i data-lucide="chevron-down" class="icon-chevron"></i>
+                        </div>
+
+                         <div class="accordion-content">
+                            <h4 class="h5 mb-3 text-accent mt-6">Who This Program Is For</h4>
+                            <p class="mb-4">
+                                Bridges the gap between physical therapy discharge and confident, independent movement.
+                            </p>
+                            <ul class="space-y-2 mb-6 pl-4">
+                                <li class="flex items-center gap-2"><i data-lucide="check" class="text-accent w-4 h-4"></i> Recently discharged from PT but not fully confident</li>
+                                <li class="flex items-center gap-2"><i data-lucide="check" class="text-accent w-4 h-4"></i> Cleared to exercise but unsure how to progress safely</li>
+                                <li class="flex items-center gap-2"><i data-lucide="check" class="text-accent w-4 h-4"></i> Afraid of reinjury or setbacks</li>
+                            </ul>
+                            
+                            <a href="contact.html" class="btn btn-primary mt-4">Inquire About This Program</a>
+                         </div>
+                    </div>
+                </div>
+
+                <!-- Program 3: Performance Prep -->
+                <div class="card reveal mb-8">
+                      <div class="flex flex-col gap-6">
+                        <div class="accordion-trigger flex items-center justify-between">
+                             <div class="flex items-center gap-4">
+                                <i data-lucide="trending-up" class="text-accent w-8 h-8"></i>
+                                <h2 class="h3 m-0">Performance Prep</h2>
+                            </div>
+                            <i data-lucide="chevron-down" class="icon-chevron"></i>
+                        </div>
+
+                         <div class="accordion-content">
+                            <h4 class="h5 mb-3 text-accent mt-6">Who This Program Is For</h4>
+                            <p class="mb-4">
+                                For athletes and active individuals training for specific events who want to perform well while protecting their bodies.
+                            </p>
+                             <ul class="space-y-2 mb-6 pl-4">
+                                <li class="flex items-center gap-2"><i data-lucide="check" class="text-accent w-4 h-4"></i> Training for HYROX, marathons, or obstacle course races</li>
+                                <li class="flex items-center gap-2"><i data-lucide="check" class="text-accent w-4 h-4"></i> Climbers preparing for competitions or big projects</li>
+                                <li class="flex items-center gap-2"><i data-lucide="check" class="text-accent w-4 h-4"></i> Endurance athletes wanting injury prevention</li>
+                            </ul>
+                            
+                            <a href="contact.html" class="btn btn-primary mt-4">Inquire About This Program</a>
+                         </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- PRICING PHILOSOPHY SECTION -->
+    <section class="section bg-black">
+        <div class="container">
+            <div class="text-center max-w-4xl mx-auto">
+                <h2 class="mb-4 reveal">Investment in Your Longevity</h2>
+                <p class="text-xl reveal mb-10 text-gray-300">
+                    Pricing depends on program type and session frequency. Every program is customized to your goals, timeline, and needs.
+                </p>
+                
+                <div class="reveal card p-8 border mb-10 text-left">
+                    <h3 class="mb-6 text-accent text-center">What's Included in Every Program</h3>
+                    <div class="grid grid-2">
+                        <div class="flex items-start gap-3">
+                            <i data-lucide="check-circle" class="text-accent w-5 h-5 mt-1"></i>
+                            <span class="text-gray-300">Personalized movement assessment</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i data-lucide="check-circle" class="text-accent w-5 h-5 mt-1"></i>
+                            <span class="text-gray-300">Ongoing education & coaching</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i data-lucide="check-circle" class="text-accent w-5 h-5 mt-1"></i>
+                            <span class="text-gray-300">Technique-first approach</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i data-lucide="check-circle" class="text-accent w-5 h-5 mt-1"></i>
+                            <span class="text-gray-300">Long-term function focus</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i data-lucide="check-circle" class="text-accent w-5 h-5 mt-1"></i>
+                            <span class="text-gray-300">Reduced pain & independence</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i data-lucide="check-circle" class="text-accent w-5 h-5 mt-1"></i>
+                            <span class="text-gray-300">Flexible scheduling</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <a href="contact.html" class="btn btn-primary reveal">
+                    Schedule a Complimentary Consultation
+                </a>
+            </div>
+        </div>
+    </section>
 
   <!-- FOOTER -->
   <footer class="footer">
     <div class="container">
-      <div class="footer-content">
-        <p class="mb-2">
-          <span class="text-accent">MYO</span>FIT Personal Training
-        </p>
-        <p>&copy; 2025 Yolanda Reinert. All rights reserved.</p>
-        <p class="mt-2 font-xs">
-          NASM Certified Personal Trainer · Pilates Instructor · Yoga Instructor
-        </p>
-        <div class="mt-3 flex gap-4 justify-center items-center flex-wrap">
-          <a href="tel:+17736963481" class="text-gray-400 no-underline transition-colors flex items-center gap-2 font-sm hover-accent">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-            </svg>
-            773-696-3481
-          </a>
-          <a href="http://www.myofitpt.com" target="_blank" rel="noopener noreferrer" rel="noopener noreferrer" class="text-gray-400 no-underline transition-colors flex items-center gap-2 font-sm hover-accent">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="10"></circle>
-              <line x1="2" y1="12" x2="22" y2="12"></line>
-              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
-            </svg>
-            myofitpt.com
-          </a>
-          <a href="http://www.facebook.com/myofi.pt?ref=hl" target="_blank" rel="noopener noreferrer" rel="noopener noreferrer" class="text-gray-400 no-underline transition-colors flex items-center gap-2 font-sm hover-accent">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
-            </svg>
-            Facebook
-          </a>
-          <a href="http://www.linkedin.com/profile/view?id=108573553&trk=nav_responsive_tab_profile" target="_blank" rel="noopener noreferrer" rel="noopener noreferrer" class="text-gray-400 no-underline transition-colors flex items-center gap-2 font-sm hover-accent">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-              <rect x="2" y="9" width="4" height="12"></rect>
-              <circle cx="4" cy="4" r="2"></circle>
-            </svg>
-            LinkedIn
-          </a>
-          <a href="https://www.instagram.com/myofit_pt/" target="_blank" rel="noopener noreferrer" rel="noopener noreferrer" class="text-gray-400 no-underline transition-colors flex items-center gap-2 font-sm hover-accent">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-            </svg>
-            @myofit_pt
-          </a>
-          <a href="mailto:myofitpt@gmail.com" class="text-gray-400 no-underline transition-colors flex items-center gap-2 font-sm hover-accent">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-              <polyline points="22,6 12,13 2,6"></polyline>
-            </svg>
-            myofitpt@gmail.com
-          </a>
+      <div class="footer-grid">
+        <!-- Column 1: Brand -->
+        <div class="footer-column">
+          <p class="footer-brand">MYOFIT</p>
+          <p class="footer-tagline text-accent mb-4">Movement & Longevity Training</p>
+          <p class="text-xs text-gray-500 max-w-xs">
+            Helping adults 40+ build strength, reduce pain, and move with confidence through evidence-based personal training.
+          </p>
+        </div>
+        
+        <!-- Column 2: Contact -->
+        <div class="footer-column">
+          <h4 class="footer-heading">Contact</h4>
+          <ul class="footer-links">
+            <li><a href="tel:+17736963481" class="hover-accent">773-696-3481</a></li>
+            <li><a href="mailto:myofitpt@gmail.com" class="hover-accent">myofitpt@gmail.com</a></li>
+            <li><a href="contact.html" class="hover-accent">Book Assessment</a></li>
+            <li><a href="faq.html" class="hover-accent">FAQ</a></li>
+          </ul>
+        </div>
+        
+        <!-- Column 3: Connect -->
+        <div class="footer-column">
+          <h4 class="footer-heading">Connect</h4>
+          <ul class="footer-links">
+            <li><a href="https://www.instagram.com/myofit_pt/" target="_blank" rel="noopener noreferrer" class="hover-accent">Instagram</a></li>
+            <li><a href="https://www.facebook.com/myofi.pt" target="_blank" rel="noopener noreferrer" class="hover-accent">Facebook</a></li>
+            <li><a href="https://www.linkedin.com/profile/view?id=108573553" target="_blank" rel="noopener noreferrer" class="hover-accent">LinkedIn</a></li>
+          </ul>
+        </div>
+        
+        <!-- Column 4: Legal -->
+        <div class="footer-column">
+          <h4 class="footer-heading">Legal</h4>
+          <ul class="footer-links">
+            <li><a href="privacy.html" class="hover-accent">Privacy Policy</a></li>
+            <li><a href="terms.html" class="hover-accent">Terms of Service</a></li>
+            <li><span class="text-gray-600">© 2025 Yolanda Reinert</span></li>
+            <li><span class="text-gray-600 text-xs">NASM-CPT</span></li>
+          </ul>
         </div>
       </div>
     </div>
-        <div class="mt-3 flex gap-4 justify-center items-center flex-wrap">
-          <a href="privacy.html" class="text-gray-400 no-underline transition-colors font-sm hover-accent">Privacy Policy</a>
-          <a href="terms.html" class="text-gray-400 no-underline transition-colors font-sm hover-accent">Terms of Service</a>
-        </div>
   </footer>
 
-  <!-- Image Modal with Inspiring Messages -->
-  <div id="imageModal" class="modal-overlay">
-    <div class="modal-content">
-      <button class="modal-close" aria-label="Close modal">&times;</button>
-      <div class="modal-image-container">
-        <img id="modalImage" src="" alt="">
-      </div>
-      <div class="modal-message">
-        <h3 id="modalTitle"></h3>
-        <p id="modalInspiration"></p>
-        <p class="modal-signature">— Yolanda</p>
-      </div>
-    </div>
-  </div>
-
-  <script src="script.js"></script>
+    <script src="script.js"></script>
+    <script type="module" src="ai-agent.js"></script>
+    <script>
+        // Initialize Icons
+        lucide.createIcons();
+    </script>
 </body>
 </html>

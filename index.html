@@ -5,20 +5,20 @@
   <link rel="dns-prefetch" href="//fonts.gstatic.com">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="icon" type="image/png" href="favicon.png">
   <meta name="description" content="Chicago personal trainer specializing in movement and longevity training for adults 40+. In-person training to reduce pain, build strength, and stay active longer. Book your free assessment.">
-  <title>Yolanda R. - Chicago Personal Trainer for Adults 40+ | Movement & Longevity Training</title>
+  <title>MYOFIT - Chicago Personal Trainer for Adults 40+ | Movement & Longevity Training</title>
   
   <!-- Open Graph / Social Media -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.myofitpt.com/">
-  <meta property="og:title" content="Yolanda R. - Chicago Personal Trainer for Adults 40+">
+  <meta property="og:title" content="MYOFIT - Chicago Personal Trainer for Adults 40+">
   <meta property="og:description" content="In-person training in Chicago that helps you move with less pain, feel stronger, and stay active longer. Book your free assessment.">
   <meta property="og:image" content="https://www.myofitpt.com/images/yolanda-professional/portrait-leaning.jpg">
   
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Yolanda R. - Chicago Personal Trainer for Adults 40+">
+  <meta name="twitter:title" content="MYOFIT - Chicago Personal Trainer for Adults 40+">
   <meta name="twitter:description" content="In-person training in Chicago that helps you move with less pain, feel stronger, and stay active longer.">
   <meta name="twitter:image" content="https://www.myofitpt.com/images/yolanda-professional/portrait-leaning.jpg">
   
@@ -33,7 +33,6 @@
   <link rel="stylesheet" href="index.css">
   <link rel="stylesheet" href="ai-widget.css">
   
-  <script type="module" src="ai-agent.js"></script>
   <script src="script.js" defer></script>
   
   <!-- Structured Data for SEO -->
@@ -114,83 +113,90 @@
   
   <!-- NAVIGATION -->
   <header class="header">
-    <div class="container header-inner">
-      <a href="index.html" class="brand logo">
-        <span class="brand-name logo-main">Yolanda R.</span>
-        <span class="brand-tagline logo-tagline">Movement & Longevity Training</span>
+    <nav class="nav container">
+      <a href="index.html" class="logo">
+        <div class="logo-main">MYOFIT</div>
+        <div class="logo-tagline">Movement & Longevity Training</div>
       </a>
       
       <button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">
         ☰
       </button>
       
-      <nav class="main-nav" aria-label="Main navigation">
-        <ul class="nav-list" id="nav-links">
-          <li><a href="index.html" class="nav-link active">Home</a></li>
-          <li><a href="about.html" class="nav-link">About</a></li>
-          <li><a href="programs.html" class="nav-link">Programs</a></li>
-          <li><a href="movement-library.html" class="nav-link">Movement Library</a></li>
-          <li><a href="results.html" class="nav-link">Results</a></li>
-          <li><a href="faq.html" class="nav-link">FAQ</a></li>
-          <li><a href="contact.html" class="nav-link">Contact</a></li>
-        </ul>
-        <div class="nav-actions">
-          <a href="mailto:myofitpt@gmail.com" class="nav-link">Email Yolanda</a>
-          <a href="https://calendar.google.com/calendar/u/0/r?hl=en&pli=1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-            Book Your Free Assessment
-          </a>
-        </div>
-      </nav>
-    </div>
+      <ul class="nav-links" id="nav-links" aria-label="Main navigation">
+        <li><a href="index.html" class="nav-link active">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="programs.html" class="nav-link">Programs</a></li>
+        <li><a href="results.html" class="nav-link">Results</a></li>
+        <li><a href="movement-library.html" class="nav-link">Library</a></li>
+        <li><a href="thank-you.html" class="nav-link">Thank You</a></li>
+        <li><a href="faq.html" class="nav-link">FAQ</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+        <li><a href="mailto:myofitpt@gmail.com" class="btn btn-secondary btn-nav">Email Yolanda</a></li>
+        <li><a href="https://calendar.google.com/calendar/u/0/r?hl=en&pli=1" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-nav">Book Assessment</a></li>
+      </ul>
+    </nav>
   </header>
 
   <!-- HERO SECTION -->
-  <section class="hero" id="main-content">
-    <div class="hero-overlay"></div>
-    <div class="hero-inner container reveal">
-      <div class="hero-copy">
-        <h1 class="h1 text-white mb-4">
-          Move Stronger, Live Longer—Chicago Personal Training for Adults 40+
-        </h1>
-        <p class="text-large text-gray-200">
-          In-person training in Chicago that helps you move with less pain, feel stronger, and stay active longer. No gimmicks. Just proven methods that work for your body and your life.
-        </p>
-        <ul class="hero-benefits text-gray-200">
-          <li>Climb stairs without grabbing the railing</li>
-          <li>Get off the floor without help</li>
-          <li>Play with your grandkids without worrying about your knees</li>
-        </ul>
-        <div class="hero-ctas">
-          <a href="https://calendar.google.com/calendar/u/0/r?hl=en&pli=1" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-large">Book Your Free Assessment</a>
-          <a href="#mobility-checklist" class="btn btn-secondary btn-large">Get the 5-Minute Mobility Checklist</a>
+  <section class="hero-portrait" id="main-content">
+    <div class="container">
+      <div class="grid grid-2 items-center gap-12 py-20">
+        <div class="reveal w-full-mobile">
+          <img src="images/gallery/img1.png" 
+               alt="Yolanda Reinert - NASM Certified Personal Trainer" 
+               class="hero-image open-modal"
+               data-image="images/gallery/img1.png"
+               data-title="Meet Yolanda"
+               data-message="Strength, mobility, and longevity.">
+        </div>
+        
+        <!-- Introduction Column -->
+        <div class="reveal">
+          <h1 class="h1 text-white mb-4">
+            Meet Yolanda Reinert
+          </h1>
+          <p class="text-accent text-xl font-bold mb-6">
+            NASM-Certified Personal Trainer · Movement & Longevity Specialist
+          </p>
+          <p class="text-large text-gray-200 mb-6">
+            For over 12 years, I've helped adults 40+ build strength, reduce pain, and move with confidence. My approach combines evidence-based training with a deep understanding of how bodies change over time.
+          </p>
+          
+          <!-- Credentials Grid -->
+          <div class="credentials-grid mb-8">
+            <div class="credential-item">
+              <span class="text-accent">•</span> NASM Certified Personal Trainer
+            </div>
+            <div class="credential-item">
+               <span class="text-accent">•</span> Certified Pilates Instructor
+            </div>
+            <div class="credential-item">
+               <span class="text-accent">•</span> Certified Yoga Instructor
+            </div>
+            <div class="credential-item">
+               <span class="text-accent">•</span> Senior Fitness Specialist
+            </div>
+            <div class="credential-item">
+               <span class="text-accent">•</span> Corrective Exercise Specialist
+            </div>
+            <div class="credential-item">
+               <span class="text-accent">•</span> B.A. in Psychology
+            </div>
+          </div>
+          
+          <div class="flex gap-4 flex-wrap">
+            <a href="contact.html" class="btn btn-primary btn-large">Book Free Assessment</a>
+            <a href="about.html" class="btn btn-secondary btn-large">Meet Yolanda</a>
+          </div>
         </div>
       </div>
     </div>
-    <div class="scroll-indicator">
-      <div class="mouse">
-        <div class="wheel"></div>
-      </div>
-      <div class="arrow-scroll"></div>
-    </div>
   </section>
 
+
   <!-- TRUST STRIP / CERTIFICATIONS -->
-  <section class="certs py-8 border-b border-gray-800 bg-charcoal">
-    <div class="container text-center">
-      <h2 class="h3 mb-4 text-white">Trusted Certifications & Experience</h2>
-      <p class="text-gray-300 max-w-800 mx-auto mb-6">
-        Yolanda Reinert brings over 12 years of coaching experience and holds certifications as a NASM Certified Personal Trainer, Certified Pilates Instructor, Certified Yoga Instructor, Senior Fitness Specialist, and Corrective Exercise Specialist. She also holds a B.A. in Psychology, bringing a deeper understanding of motivation and behavior change to every session.
-      </p>
-      <ul class="certs-list reveal text-gray-300">
-        <li>NASM Certified Personal Trainer</li>
-        <li>Pilates Instructor</li>
-        <li>Yoga Instructor</li>
-        <li>Senior Fitness Specialist</li>
-        <li>Corrective Exercise Specialist</li>
-        <li>B.A. Psychology</li>
-      </ul>
-    </div>
-  </section>
+
 
   <!-- PROBLEM-SOLUTION -->
   <section class="section">
@@ -228,53 +234,168 @@
     </div>
   </section>
 
-  <!-- Floating Image Teaser -->
-  <div class="floating-image-container floating-right" data-scroll-reveal="right">
-    <img src="./images/yolanda-professional/bridge-pose-bw.jpg" alt="Strength and Flexibility" class="floating-image open-modal"
-         data-image="./images/yolanda-professional/bridge-pose-bw.jpg" 
-         data-title="Strength in Stillness" 
-         data-message="True strength isn't just about moving heavy objects. It's about controlling your own body through space with grace and intention.">
-  </div>
+  <!-- MOVEMENT PHILOSOPHY SECTION -->
+  <section class="section bg-black">
+      <div class="container">
+          <div class="grid grid-2 items-center gap-12">
+               <div class="reveal">
+                   <img src="images/gallery/yolanda-portrait-myofit.jpg" class="img-portrait rounded-xl shadow-premium open-modal cursor-pointer hover-lift transition-premium" 
+                        data-image="images/gallery/yolanda-portrait-myofit.jpg" 
+                        data-title="Movement Philosophy" 
+                        data-message="True movement mastery comes from the intersection of strength, flexibility, and breath control. Every pose is a conversation between body and mind."
+                        alt="Movement Philosophy">
+               </div>
+               <div class="reveal">
+                   <h2 class="h2 text-white">The Philosophy of<br><span class="text-accent gradient-text">True Strength</span></h2>
+                   <p class="text-xl italic text-gray-300 border-l-4 border-accent pl-6 py-2 mb-8">
+                       "True movement mastery comes from the intersection of strength, flexibility, and breath control. Every pose is a conversation between body and mind."
+                   </p>
+                   <p class="text-gray-400 mb-8">
+                       We don't just train muscles; we train movements. By integrating stability with mobility, we build a body that is resilient, capable, and pain-free.
+                   </p>
+                   <a href="about.html" class="btn btn-primary">Learn My Method</a>
+               </div>
+          </div>
+      </div>
+  </section>
 
-  <!-- HOW WE WORK TOGETHER -->
-  <section class="process section bg-charcoal-light">
+  <!-- NOT JUST EXERCISE SECTION -->
+  <section class="section bg-black position-relative overflow-hidden">
     <div class="container">
-      <h2 class="h2 text-center mb-4 reveal">How We Work Together</h2>
-      <div class="process-grid">
-        <!-- Step 1 -->
-        <article class="process-step card bg-charcoal p-6 border rounded reveal">
-          <div class="step-number text-accent">01</div>
-          <div class="step-body">
-            <h3 class="h4 text-white mb-2">Assess</h3>
-            <p class="text-gray-400">We start with a comprehensive movement screening to understand your history, limitations, and goals.</p>
-          </div>
-        </article>
-        <!-- Step 2 -->
-        <article class="process-step card bg-charcoal p-6 border rounded reveal">
-          <div class="step-number text-accent">02</div>
-          <div class="step-body">
-            <h3 class="h4 text-white mb-2">Build</h3>
-            <p class="text-gray-400">Master fundamental patterns. We focus on technique first to ensure you're utilizing the right muscles.</p>
-          </div>
-        </article>
-        <!-- Step 3 -->
-        <article class="process-step card bg-charcoal p-6 border rounded reveal">
-          <div class="step-number text-accent">03</div>
-          <div class="step-body">
-            <h3 class="h4 text-white mb-2">Progress</h3>
-            <p class="text-gray-400">Gradually increase load and complexity. As your confidence grows, so does the challenge.</p>
-          </div>
-        </article>
-        <!-- Step 4 -->
-        <article class="process-step card bg-charcoal p-6 border rounded reveal">
-          <div class="step-number text-accent">04</div>
-          <div class="step-body">
-            <h3 class="h4 text-white mb-2">Thrive</h3>
-            <p class="text-gray-400">Move without fear. Return to the activities you love with a body that feels resilient and capable.</p>
-          </div>
-        </article>
+      <div class="content-with-image-embed">
+        <div class="content-column reveal">
+          <h2 class="text-white mb-4">Not Just Exercise.<br><span class="text-accent">Intelligent Movement.</span></h2>
+          <p class="mb-6">
+            The fitness industry sells exhaustion. I sell capability. Using clinical-grade protocols and longevity science, we build bodies that don't just look good—they function flawlessly for decades.
+          </p>
+          <ul class="space-y-4 mb-8 text-gray-300">
+            <li class="flex items-center gap-3">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent flex-shrink-0">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              Joint-friendly strength methodology
+            </li>
+            <li class="flex items-center gap-3">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent flex-shrink-0">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              Personalized biomechanics assessment
+            </li>
+            <li class="flex items-center gap-3">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent flex-shrink-0">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              Evidence-based longevity protocols
+            </li>
+          </ul>
+          <a href="about.html" class="btn btn-outline">Meet Yolanda</a>
+        </div>
+        
+        <div class="image-embed-container reveal">
+          <img src="images/gallery/img4.jpg" 
+               alt="Yolanda - Strength in Stillness"
+               class="embedded-image open-modal"
+               data-image="images/gallery/img4.jpg"
+               data-title="The Art of Controlled Movement"
+               data-message="Power isn't always loud. The deepest strength comes from complete body awareness and the ability to move through space with intention and grace.">
+        </div>
       </div>
     </div>
+  </section>
+
+  <!-- MOVEMENT IN ACTION SECTION -->
+  <section class="section position-relative overflow-hidden">
+    <div class="container">
+      <div class="content-with-image-embed reverse">
+        <!-- Philosophy Text -->
+        <div class="content-column reveal">
+          <h2 class="text-white mb-4">Movement<br><span class="text-accent">in Action</span></h2>
+          <p class="text-large text-gray-200 mb-6">
+            True discipline isn't about punishment. It's about showing up consistently, challenging yourself with intention, and building a body that moves with power and grace.
+          </p>
+          <p class="text-gray-400 mb-6">
+            Every movement is an opportunity to practice control, develop strength, and connect with your body's incredible potential. Whether it's dynamic conditioning or precise strength work, the goal is always the same: move better, feel better, live better.
+          </p>
+          <a href="programs.html" class="btn btn-secondary">View Programs</a>
+        </div>
+        
+        <!-- Jump Rope Action Shot -->
+        <!-- Jump Rope Action Shot -->
+        <div class="image-embed-container reveal">
+          <img src="images/gallery/yolanda-portrait-myofit.jpg" 
+               alt="Yolanda - Dynamic Training" 
+               class="embedded-image open-modal"
+               data-image="images/gallery/yolanda-portrait-myofit.jpg"
+               data-title="Dynamic Conditioning"
+               data-message="Cardiovascular endurance meets functional movement. Building a body that performs as beautifully as it looks.">
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- HOW IT WORKS -->
+  <!-- HOW IT WORKS -->
+  <section class="section bg-charcoal-light relative bg-steps">
+    <div class="container relative z-10">
+      <h2 class="h2 text-center mb-12 reveal">How We Work Together</h2>
+      <div class="grid-responsive">
+        <!-- Step 1 -->
+        <div class="card bg-charcoal p-6 border rounded reveal">
+          <div class="text-accent text-4xl font-display font-bold mb-4">01</div>
+          <h3 class="h4 text-white mb-2">Assess</h3>
+          <p class="text-gray-400">We start with a comprehensive movement screening to understand your history, limitations, and goals.</p>
+        </div>
+        <!-- Step 2 -->
+        <div class="card bg-charcoal p-6 border rounded reveal border-accent">
+          <div class="text-accent text-4xl font-display font-bold mb-4">02</div>
+          <h3 class="h4 text-white mb-2">Build</h3>
+          <p class="text-gray-400">Master fundamental patterns. We focus on technique first to ensure you're utilizing the right muscles.</p>
+        </div>
+        <!-- Step 3 -->
+        <div class="card bg-charcoal p-6 border rounded reveal">
+          <div class="text-accent text-4xl font-display font-bold mb-4">03</div>
+          <h3 class="h4 text-white mb-2">Progress</h3>
+          <p class="text-gray-400">Gradually increase load and complexity. As your confidence grows, so does the challenge.</p>
+        </div>
+        <!-- Step 4 -->
+        <div class="card bg-charcoal p-6 border rounded reveal">
+          <div class="text-accent text-4xl font-display font-bold mb-4">04</div>
+          <h3 class="h4 text-white mb-2">Thrive</h3>
+          <p class="text-gray-400">Move without fear. Return to the activities you love with a body that feels resilient and capable.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MOVEMENT GALLERY -->
+  <section class="section bg-black">
+      <div class="container">
+          <h2 class="text-center mb-12 reveal">Movement Gallery</h2>
+          <div class="gallery-grid reveal">
+              <div class="gallery-item open-modal cursor-pointer" data-image="images/gallery/img1.png" data-title="Strength" data-message="Building a foundation that lasts a lifetime.">
+                  <span class="category-tag">Strength</span>
+                  <img src="images/gallery/img1.png" class="gallery-image" alt="Strength">
+              </div>
+              <div class="gallery-item open-modal cursor-pointer" data-image="images/gallery/img2.jpg" data-title="Focus" data-message="The mind leads the body.">
+                  <span class="category-tag">Focus</span>
+                  <img src="images/gallery/img2.jpg" class="gallery-image" alt="Focus">
+              </div>
+              <div class="gallery-item open-modal cursor-pointer" data-image="images/gallery/yolanda-portrait-myofit.jpg" data-title="Balance" data-message="Finding stability in motion.">
+                  <span class="category-tag">Balance</span>
+                  <img src="images/gallery/yolanda-portrait-myofit.jpg" class="gallery-image" alt="Balance">
+              </div>
+              <div class="gallery-item open-modal cursor-pointer" data-image="images/gallery/img4.jpg" data-title="Mobility" data-message="Freedom of movement is the ultimate wealth.">
+                  <span class="category-tag">Mobility</span>
+                  <img src="images/gallery/img4.jpg" class="gallery-image" alt="Mobility">
+              </div>
+              <div class="gallery-item open-modal cursor-pointer" data-image="images/gallery/img5.jpg" data-title="Flow" data-message="Connecting breath with strength.">
+                  <span class="category-tag">Flow</span>
+                  <img src="images/gallery/img5.jpg" class="gallery-image" alt="Flow">
+              </div>
+          </div>
+      </div>
   </section>
 
   <!-- PROGRAMS SUMMARY -->
@@ -324,86 +445,85 @@
       </div>
       
       <div class="text-center">
-        <a href="programs.html" class="btn btn-secondary">View All Program Details</a>
+        <a href="programs.html" class="btn btn-secondary">View All Programs</a>
       </div>
     </div>
   </section>
 
-  <!-- TESTIMONIALS -->
-  <section class="testimonials section bg-charcoal-light">
+  <!-- TESTIMONIALS SHORT -->
+  <section class="section bg-charcoal">
     <div class="container">
-      <h2 class="h2 text-center mb-4 reveal">Real Results from Real People</h2>
-      <p class="text-gray-300 text-center max-w-700 mx-auto mb-6 reveal">
-        Hear from clients who've transformed their movement and their lives.
-      </p>
-      
-      <div class="testimonial-grid">
-        <figure class="testimonial-card card bg-charcoal border reveal">
-          <blockquote class="text-gray-300">
+      <h2 class="h2 text-center mb-10 reveal">Real Results</h2>
+      <div class="grid-responsive mb-8">
+        
+        <div class="reveal testimonial-card">
+          <p class="testimonial-quote">
             "Yolanda meets you where you are. I feel challenged, and each session ends with a feeling of accomplishing some moves I never imagined I could do."
-          </blockquote>
-          <figcaption>
-            <span class="name text-white">Mary T.</span>
-            <span class="meta text-gray-400">70s</span>
-          </figcaption>
-        </figure>
+          </p>
+          <div class="testimonial-author">
+            <span class="testimonial-name">Mary T.</span>
+            <span class="testimonial-role">70s</span>
+          </div>
+        </div>
 
-        <figure class="testimonial-card card bg-charcoal border reveal">
-          <blockquote class="text-gray-300">
+        <div class="reveal testimonial-card">
+          <p class="testimonial-quote">
             "Only Yolanda has been able to combine all aspects of exercise for me. As a physician, I recommend Yolanda without reservation!"
-          </blockquote>
-          <figcaption>
-            <span class="name text-white">Zainab B.</span>
-            <span class="meta text-gray-400">Physician</span>
-          </figcaption>
-        </figure>
+          </p>
+          <div class="testimonial-author">
+            <span class="testimonial-name">Zainab B.</span>
+            <span class="testimonial-role">Physician</span>
+          </div>
+        </div>
 
-        <figure class="testimonial-card card bg-charcoal border reveal">
-          <blockquote class="text-gray-300">
-            "Two and a half years ago, I could barely complete 20 minutes on a bike. Now I work out 5–6 days a week. Yolanda is such an inspirational influence!"
-          </blockquote>
-          <figcaption>
-            <span class="name text-white">Marc A.</span>
-            <span class="meta text-gray-400">70s</span>
-          </figcaption>
-        </figure>
+        <div class="reveal testimonial-card">
+          <p class="testimonial-quote">
+            "Two and a half years ago, I could barely complete 20 minutes on a bike. Now I work out 5-6 days a week. Yolanda is such an inspirational influence!"
+          </p>
+          <div class="testimonial-author">
+            <span class="testimonial-name">Marc A.</span>
+            <span class="testimonial-role">70s</span>
+          </div>
+        </div>
+
       </div>
-
-      <div class="testimonials-footer">
-        <a href="results.html" class="btn btn-secondary">Read More Success Stories</a>
+      <div class="text-center">
+        <a href="results.html" class="btn btn-secondary">More Success Stories</a>
       </div>
     </div>
   </section>
   
-  <!-- Floating Image Teaser 2 -->
-  <div class="floating-image-container floating-left top-70" data-scroll-reveal="left">
-    <img src="./images/yolanda-professional/handstand-floral.jpg" alt="Balance and Control" class="floating-image open-modal"
-         data-image="./images/yolanda-professional/handstand-floral.jpg"
-         data-title="Balance is a Practice" 
-         data-message="Balance isn't something you find, it's something you create. Through consistent practice, we build stability in the body and the mind.">
-  </div>
+
 
   <!-- FINAL CTA & LEAD MAGNET -->
-  <section class="section">
-    <div class="container max-w-700 text-center">
+  <!-- CTA SECTION -->
+  <section class="section relative bg-cta">
+    <div class="container max-w-700 text-center relative z-10 w-full">
       <h2 class="h2 mb-4 reveal">Ready to Move Better?</h2>
       <p class="text-gray-300 text-large mb-8 reveal">
         Whether you're ready to book an assessment or just want to start with some simple movement, I'm here to help.
       </p>
       
       <div class="flex flex-col gap-6 items-center">
-        <a href="contact.html" class="btn btn-primary btn-large w-full sm:w-auto">Book Your Free Assessment</a>
+        <a href="contact.html" class="btn btn-primary btn-large w-full sm:w-auto">Book Your Free Movement Assessment</a>
         
         <div class="w-full h-px bg-gray-800 my-4"></div>
         
-        <div id="mobility-assessment" class="bg-gray-900 border rounded p-6 w-full reveal">
+        <div id="mobility-assessment" class="lead-magnet-form w-full reveal">
           <h3 class="h4 text-white mb-2">Not Ready to Commit?</h3>
           <p class="text-gray-400 mb-4">Get my free 5-Minute Morning Mobility Checklist delivered to your inbox.</p>
-          <form class="flex flex-col sm:flex-row gap-2" onsubmit="event.preventDefault(); this.reset(); alert('Thank you! The checklist is on its way.');">
-            <label for="email-signup" class="sr-only">Email Address for Free Mobility Checklist</label>
-            <input id="email-signup" type="email" placeholder="Your Email Address" required 
-                   class="flex-1 bg-charcoal border border-gray-700 rounded px-4 py-3 text-white focus:outline-none focus:border-accent">
-            <button type="submit" class="btn btn-secondary">Send It</button>
+          <form class="email-form" onsubmit="event.preventDefault(); this.reset(); alert('Thank you! The checklist is on its way.');">
+            <div class="form-group-inline">
+              <label for="email-signup" class="sr-only">Email Address</label>
+              <input 
+                id="email-signup" 
+                type="email" 
+                placeholder="Your email address" 
+                required 
+                class="form-input">
+              <button type="submit" class="btn btn-tertiary">Get Free Checklist</button>
+            </div>
+            <p class="form-privacy">We respect your privacy. Unsubscribe anytime.</p>
           </form>
         </div>
       </div>
@@ -413,69 +533,54 @@
   <!-- FOOTER -->
   <footer class="footer">
     <div class="container">
-      <div class="footer-content">
-        <p class="mb-2">
-          <span class="text-accent">MYO</span>FIT Personal Training
-        </p>
-        <p>&copy; 2025 Yolanda Reinert. All rights reserved.</p>
-        <p class="mt-2 font-xs">
-          NASM Certified Personal Trainer · Pilates Instructor · Yoga Instructor
-        </p>
-        <div class="mt-3 flex gap-4 justify-center items-center flex-wrap">
-          <a href="tel:+17736963481" class="text-gray-400 no-underline transition-colors flex items-center gap-2 font-sm hover-accent">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-            </svg>
-            773-696-3481
-          </a>
-          <a href="http://www.myofitpt.com" target="_blank" rel="noopener noreferrer" rel="noopener noreferrer" class="text-gray-400 no-underline transition-colors flex items-center gap-2 font-sm hover-accent">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="10"></circle>
-              <line x1="2" y1="12" x2="22" y2="12"></line>
-              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
-            </svg>
-            myofitpt.com
-          </a>
-          <a href="http://www.facebook.com/myofi.pt?ref=hl" target="_blank" rel="noopener noreferrer" rel="noopener noreferrer" class="text-gray-400 no-underline transition-colors flex items-center gap-2 font-sm hover-accent">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
-            </svg>
-            Facebook
-          </a>
-          <a href="http://www.linkedin.com/profile/view?id=108573553&trk=nav_responsive_tab_profile" target="_blank" rel="noopener noreferrer" rel="noopener noreferrer" class="text-gray-400 no-underline transition-colors flex items-center gap-2 font-sm hover-accent">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-              <rect x="2" y="9" width="4" height="12"></rect>
-              <circle cx="4" cy="4" r="2"></circle>
-            </svg>
-            LinkedIn
-          </a>
-          <a href="https://www.instagram.com/myofit_pt/" target="_blank" rel="noopener noreferrer" rel="noopener noreferrer" class="text-gray-400 no-underline transition-colors flex items-center gap-2 font-sm hover-accent">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-            </svg>
-            @myofit_pt
-          </a>
-          <a href="mailto:myofitpt@gmail.com" class="text-gray-400 no-underline transition-colors flex items-center gap-2 font-sm hover-accent">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-              <polyline points="22,6 12,13 2,6"></polyline>
-            </svg>
-            myofitpt@gmail.com
-          </a>
+      <div class="footer-grid">
+        <!-- Column 1: Brand -->
+        <div class="footer-column">
+          <p class="footer-brand">MYOFIT</p>
+          <p class="footer-tagline text-accent mb-4">Movement & Longevity Training</p>
+          <p class="text-xs text-gray-500 max-w-xs">
+            Helping adults 40+ build strength, reduce pain, and move with confidence through evidence-based personal training.
+          </p>
+        </div>
+        
+        <!-- Column 2: Contact -->
+        <div class="footer-column">
+          <h4 class="footer-heading">Contact</h4>
+          <ul class="footer-links">
+            <li><a href="tel:+17736963481" class="hover-accent">773-696-3481</a></li>
+            <li><a href="mailto:myofitpt@gmail.com" class="hover-accent">myofitpt@gmail.com</a></li>
+            <li><a href="contact.html" class="hover-accent">Book Assessment</a></li>
+            <li><a href="faq.html" class="hover-accent">FAQ</a></li>
+          </ul>
+        </div>
+        
+        <!-- Column 3: Connect -->
+        <div class="footer-column">
+          <h4 class="footer-heading">Connect</h4>
+          <ul class="footer-links">
+            <li><a href="https://www.instagram.com/myofit_pt/" target="_blank" rel="noopener noreferrer" class="hover-accent">Instagram</a></li>
+            <li><a href="https://www.facebook.com/myofi.pt" target="_blank" rel="noopener noreferrer" class="hover-accent">Facebook</a></li>
+            <li><a href="https://www.linkedin.com/profile/view?id=108573553" target="_blank" rel="noopener noreferrer" class="hover-accent">LinkedIn</a></li>
+          </ul>
+        </div>
+        
+        <!-- Column 4: Legal -->
+        <div class="footer-column">
+          <h4 class="footer-heading">Legal</h4>
+          <ul class="footer-links">
+            <li><a href="privacy.html" class="hover-accent">Privacy Policy</a></li>
+            <li><a href="terms.html" class="hover-accent">Terms of Service</a></li>
+            <li><span class="text-gray-600">© 2025 Yolanda Reinert</span></li>
+            <li><span class="text-gray-600 text-xs">NASM-CPT</span></li>
+          </ul>
         </div>
       </div>
     </div>
-        <div class="mt-3 flex gap-4 justify-center items-center flex-wrap">
-          <a href="privacy.html" class="text-gray-400 no-underline transition-colors font-sm hover-accent">Privacy Policy</a>
-          <a href="terms.html" class="text-gray-400 no-underline transition-colors font-sm hover-accent">Terms of Service</a>
-        </div>
   </footer>
 
   <!-- Image Modal with Inspiring Messages -->
   <div id="imageModal" class="modal-overlay">
+    <button class="modal-prev" aria-label="Previous image">‹</button>
     <div class="modal-content">
       <button class="modal-close" aria-label="Close modal">&times;</button>
       <div class="modal-image-container">
@@ -487,8 +592,10 @@
         <p class="modal-signature">— Yolanda</p>
       </div>
     </div>
+    <button class="modal-next" aria-label="Next image">›</button>
   </div>
 
   <script src="script.js"></script>
+  <script type="module" src="ai-agent.js"></script>
 </body>
 </html>

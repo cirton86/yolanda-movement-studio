@@ -49,9 +49,17 @@ class YolandaAI {
           this.restoreConversation();
         }
       } else {
+        // AI failed to initialize - show welcome message anyway for better UX
+        if (this.session.getMessageCount() === 0) {
+          this.addWelcomeMessage();
+        }
         this.showAPIError();
       }
     } else {
+      // No API key - show welcome message and error
+      if (this.session.getMessageCount() === 0) {
+        this.addWelcomeMessage();
+      }
       this.showAPIError();
     }
     
@@ -65,7 +73,12 @@ class YolandaAI {
   createWidget() {
     const widgetHTML = `
       <div class="ai-widget" id="ai-widget">
-        <!-- Floating Launcher Removed -->
+        <button class="ai-launcher" id="ai-launcher" aria-label="Open chat">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+          </svg>
+          <div class="ai-widget-label">Ask AI</div>
+        </button>
         
         <div class="ai-chat-window" id="ai-chat-window">
           <div class="ai-chat-header">
@@ -117,9 +130,9 @@ class YolandaAI {
    * Inject a small help icon into the footer social links area
    */
   injectFooterTrigger() {
-    // Target the specific flex container in the footer where social links are
-    // Works across all pages since they share the same footer structure
-    const footerContainer = document.querySelector('.footer .flex.gap-4');
+    // Target the footer links container
+    // Updated to match actual footer HTML structure (ul.footer-links)
+    const footerContainer = document.querySelector('.footer-links');
     
     if (footerContainer) {
       const triggerBtn = document.createElement('button');
@@ -427,7 +440,7 @@ class YolandaAI {
    * Show API error message
    */
   showAPIError() {
-    const errorMessage = `I apologize, but I'm currently unable to connect to my AI service. This might be due to a missing API key or network issue.
+    const errorMessage = `I apologize, but I'm currently unable to connect to my AI service. This might be due to a missing or invalid API key, or a network issue.
 
 For immediate assistance, please:
 - Visit the **Contact page** to schedule a free assessment

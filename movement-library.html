@@ -1,293 +1,518 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="dns-prefetch" href="//fonts.googleapis.com">
-  <link rel="dns-prefetch" href="//fonts.gstatic.com">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  <meta name="description" content="Yolanda R. Movement Library - Watch proper form techniques and exercises.">
-  <title>Movement Library | Yolanda R. - Movement & Longevity Coach</title>
-  
-  <!-- Preload Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="index.css">
-  <link rel="stylesheet" href="ai-widget.css">
-  
-  <script type="module" src="ai-agent.js"></script>
-  <script src="script.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movement Library | Yolanda R. Movement Studio</title>
+    <meta name="description" content="Watch proper form techniques and exercises.">
+    
+    <!-- Google Fonts: Cormorant Garamond & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="ai-widget.css">
+    <script type="module" src="ai-agent.js"></script>
 </head>
 <body>
-  
-  <!-- Skip Navigation Link for Accessibility -->
-  <a href="#main-content" class="skip-link">Skip to main content</a>
-  
-  
-  <!-- NAVIGATION -->
-  <header class="header">
-    <nav class="nav container">
-      <a href="index.html" class="logo">
-        <div class="logo-main">Yolanda R.</div>
-        <div class="logo-tagline">Movement & Longevity Training</div>
-      </a>
-      
-      <button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">
-        ☰
-      </button>
-      
-      <ul class="nav-links" id="nav-links" role="navigation" aria-label="Main navigation">
-        <li><a href="index.html" class="nav-link">Home</a></li>
-        <li><a href="about.html" class="nav-link">About</a></li>
-        <li><a href="programs.html" class="nav-link">Programs</a></li>
-        <li><a href="movement-library.html" class="nav-link active">Movement Library</a></li>
-        <li><a href="results.html" class="nav-link">Results</a></li>
-        <li><a href="faq.html" class="nav-link">FAQ</a></li>
-        <li><a href="contact.html" class="nav-link">Contact</a></li>
-        <li><a href="mailto:myofitpt@gmail.com" class="btn btn-secondary btn-nav">Email Yolanda</a></li>
-        <li><a href="https://calendar.google.com/calendar/u/0/r?hl=en&pli=1" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-nav">Book Assessment</a></li>
-      </ul>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar" aria-label="Main Navigation">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <div class="logo-main">MYOFIT</div>
+                <div class="logo-tagline">Movement & Longevity Training</div>
+            </a>
+            
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="programs.html">Programs</a>
+                <a href="results.html">Results</a>
+                <a href="movement-library.html" class="active" aria-current="page">Library</a>
+                <a href="thank-you.html">Thank You</a>
+                <a href="faq.html">FAQ</a>
+                <a href="contact.html" class="text-accent">Contact</a>
+            </div>
+            
+            <button class="mobile-toggle text-white md:hidden" aria-label="Open Mobile Menu">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
     </nav>
-  </header>
 
-  <!-- HERO HEADER -->
-  <section class="section bg-charcoal py-hero" id="main-content">
-    <div class="container text-center">
-      <h1 class="h1 mb-4 text-white">Movement Library</h1>
-      <p class="text-large text-gray-300 max-w-700 mx-auto">
-        Watch Yolanda demonstrate proper form, technique, and movement patterns.
-      </p>
-    </div>
-  </section>
-
-  <!-- MOVEMENT LIBRARY SECTION -->
-  <section class="section bg-charcoal" id="movement-library" class="py-12">
-    <div class="container">
-      
-      <!-- Video Grid -->
-      <div class="video-grid grid-responsive mb-8">
-        
-        <!-- Video Card 1: Goblet Squat -->
-        <div class="video-card reveal relative rounded-lg bg-gray-900 border overflow-hidden transition-all">
-          <video controls class="w-full block" class="aspect-ratio-16-9">
-            <source src="videos/foundational-squat-technique.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-          <div class="video-info p-3">
-            <span class="category-tag inline-block text-accent uppercase font-bold text-xs rounded-full mb-2 bg-accent-dim">Technique</span>
-            <h4 class="text-lg m-0 text-white">Foundational Squat Technique</h4>
-          </div>
+    <!-- HERO SECTION -->
+    <!-- HERO SECTION (Minimal) -->
+    <header class="hero-minimal flex-col">
+        <div class="container relative z-20 text-center reveal active">
+            <h1 class="text-white mb-6">Movement Library</h1>
+            <p class="text-xl text-gray-300 mx-auto mb-10 max-w-2xl">
+                Master your movement. Filter by category to find the right exercise for your goals.
+            </p>
+            
+            <!-- Category Filters -->
+            <div class="flex flex-wrap justify-center gap-3">
+                <button class="btn btn-primary">All</button>
+                <button class="btn btn-secondary">Mobility</button>
+                <button class="btn btn-secondary">Strength</button>
+                <button class="btn btn-secondary">Core</button>
+                <button class="btn btn-secondary">Conditioning</button>
+                <button class="btn btn-secondary">Skill</button>
+            </div>
         </div>
+    </header>
 
-        <!-- Video Card 2: Wall Handstand -->
-        <div class="video-card reveal relative rounded-lg bg-gray-900 border overflow-hidden transition-all">
-          <video controls class="w-full block" class="aspect-ratio-16-9">
-            <source src="videos/wall-handstand-core.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-          <div class="video-info p-3">
-            <span class="category-tag inline-block text-accent uppercase font-bold text-xs rounded-full mb-2 bg-accent-dim">Core</span>
-            <h4 class="text-lg m-0 text-white">Wall Handstand Core Work</h4>
-          </div>
+    <!-- FEATURED MOVEMENTS -->
+    <section class="section pb-0">
+        <div class="container">
+            <h2 class="h3 mb-8 reveal">Featured Movements</h2>
+            <div class="grid grid-3">
+                <div class="card p-0 overflow-hidden reveal hover-lift cursor-pointer open-modal" 
+                     data-image="images/gallery/yolanda-portrait-myofit.jpg" 
+                     data-title="Balance & Stability" 
+                     data-message="Mastering balance is the key to longevity.">
+                    <img src="images/gallery/yolanda-portrait-myofit.jpg" class="aspect-video object-cover w-full" alt="Balance">
+                    <div class="p-6">
+                        <span class="badge badge-purple mb-2">Featured</span>
+                        <h3 class="h5 m-0 text-white">Balance Mastery</h3>
+                    </div>
+                </div>
+                <div class="card p-0 overflow-hidden reveal hover-lift cursor-pointer open-modal" 
+                     data-image="images/gallery/img4.jpg" 
+                     data-title="Advanced Mobility" 
+                     data-message="Unlock your full range of motion.">
+                    <img src="images/gallery/img4.jpg" class="aspect-video object-cover w-full" alt="Mobility">
+                    <div class="p-6">
+                        <span class="badge badge-blue mb-2">Featured</span>
+                        <h3 class="h5 m-0 text-white">Advanced Mobility</h3>
+                    </div>
+                </div>
+                <div class="card p-0 overflow-hidden reveal hover-lift cursor-pointer open-modal" 
+                     data-image="images/gallery/img5.jpg" 
+                     data-title="Dynamic Flow" 
+                     data-message="Connect breath with movement.">
+                    <img src="images/gallery/img5.jpg" class="aspect-video object-cover w-full" alt="Flow">
+                    <div class="p-6">
+                        <span class="badge badge-green mb-2">Featured</span>
+                        <h3 class="h5 m-0 text-white">Dynamic Flow</h3>
+                    </div>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <!-- Video Card 3: Bouldering Mobility -->
-        <div class="video-card reveal relative rounded-lg bg-gray-900 border overflow-hidden transition-all">
-          <video controls class="w-full block" class="aspect-ratio-16-9">
-            <source src="videos/bouldering-mobility.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-          <div class="video-info p-3">
-            <span class="category-tag inline-block text-accent uppercase font-bold text-xs rounded-full mb-2 bg-accent-dim">Mobility</span>
-            <h4 class="text-lg m-0 text-white">Bouldering for Mobility</h4>
-          </div>
+    <!-- LIBRARY GRID -->
+    <section class="section">
+        <div class="container">
+            <div class="grid grid-3 mb-16">
+                
+                <!-- Video 1 -->
+                <div class="card p-0 overflow-hidden reveal video-card">
+                    <div class="relative">
+                        <video controls class="w-full aspect-video bg-black">
+                            <source src="videos/foundational-squat-technique.mp4" type="video/mp4">
+                        </video>
+                        <span class="absolute bottom-2 right-2 bg-black bg-opacity-75 text-xs font-bold text-white px-2 py-1 rounded">2:45</span>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                             <span class="badge badge-category badge-blue">Technique</span>
+                             <span class="badge badge-outline">Beginner</span>
+                        </div>
+                        <h3 class="h5 m-0 text-white">Foundational Squat</h3>
+                    </div>
+                </div>
+
+                <!-- Video 2 -->
+                <div class="card p-0 overflow-hidden reveal video-card">
+                    <div class="relative">
+                        <video controls class="w-full aspect-video bg-black">
+                            <source src="videos/wall-handstand-core.mp4" type="video/mp4">
+                        </video>
+                        <span class="absolute bottom-2 right-2 bg-black bg-opacity-75 text-xs font-bold text-white px-2 py-1 rounded">1:30</span>
+                    </div>
+                    <div class="p-6">
+                         <div class="flex justify-between items-start mb-2">
+                             <span class="badge badge-category badge-purple">Core</span>
+                             <span class="badge badge-outline">Intermediate</span>
+                        </div>
+                        <h3 class="h5 m-0 text-white">Wall Handstand Core</h3>
+                    </div>
+                </div>
+
+                <!-- Video 3 -->
+                <div class="card p-0 overflow-hidden reveal video-card">
+                    <div class="relative">
+                        <video controls class="w-full aspect-video bg-black">
+                            <source src="videos/bouldering-mobility.mp4" type="video/mp4">
+                        </video>
+                        <span class="absolute bottom-2 right-2 bg-black bg-opacity-75 text-xs font-bold text-white px-2 py-1 rounded">3:15</span>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                             <span class="badge badge-category badge-blue">Mobility</span>
+                             <span class="badge badge-outline">All Levels</span>
+                        </div>
+                        <h3 class="h5 m-0 text-white">Bouldering Mobility</h3>
+                    </div>
+                </div>
+
+                <!-- Video 4 -->
+                <div class="card p-0 overflow-hidden reveal video-card">
+                    <div class="relative">
+                        <video controls class="w-full aspect-video bg-black">
+                            <source src="videos/cable-pulldowns-technique.mp4" type="video/mp4">
+                        </video>
+                        <span class="absolute bottom-2 right-2 bg-black bg-opacity-75 text-xs font-bold text-white px-2 py-1 rounded">1:45</span>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                             <span class="badge badge-category badge-accent">Strength</span>
+                             <span class="badge badge-outline">Beginner</span>
+                        </div>
+                        <h3 class="h5 m-0 text-white">Cable Pulldowns</h3>
+                    </div>
+                </div>
+
+                <!-- Video 5 -->
+                <div class="card p-0 overflow-hidden reveal video-card">
+                    <div class="relative">
+                        <video controls class="w-full aspect-video bg-black">
+                            <source src="videos/stability-ball-workout.mp4" type="video/mp4">
+                        </video>
+                        <span class="absolute bottom-2 right-2 bg-black bg-opacity-75 text-xs font-bold text-white px-2 py-1 rounded">2:10</span>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                             <span class="badge badge-category badge-purple">Core</span>
+                             <span class="badge badge-outline">Advanced</span>
+                        </div>
+                        <h3 class="h5 m-0 text-white">Stability Ball Core</h3>
+                    </div>
+                </div>
+
+                 <!-- Video 6 -->
+                <div class="card p-0 overflow-hidden reveal video-card">
+                    <div class="relative">
+                        <video controls class="w-full aspect-video bg-black">
+                            <source src="videos/battle-ropes-dynamic.mp4" type="video/mp4">
+                        </video>
+                        <span class="absolute bottom-2 right-2 bg-black bg-opacity-75 text-xs font-bold text-white px-2 py-1 rounded">0:45</span>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                             <span class="badge badge-category badge-green">Conditioning</span>
+                             <span class="badge badge-outline">Advanced</span>
+                        </div>
+                        <h3 class="h5 m-0 text-white">Battle Ropes</h3>
+                    </div>
+                </div>
+                
+                 <!-- Video 7 -->
+                <div class="card p-0 overflow-hidden reveal video-card">
+                    <div class="relative">
+                        <video controls class="w-full aspect-video bg-black">
+                            <source src="videos/sled-pull-conditioning.mp4" type="video/mp4">
+                        </video>
+                        <span class="absolute bottom-2 right-2 bg-black bg-opacity-75 text-xs font-bold text-white px-2 py-1 rounded">1:15</span>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                             <span class="badge badge-category badge-accent">Strength</span>
+                             <span class="badge badge-outline">All Levels</span>
+                        </div>
+                        <h3 class="h5 m-0 text-white">Sled Pull</h3>
+                    </div>
+                </div>
+
+                 <!-- Video 8 -->
+                <div class="card p-0 overflow-hidden reveal video-card">
+                    <div class="relative">
+                        <video controls class="w-full aspect-video bg-black">
+                            <source src="videos/v6-bouldering-advanced.mp4" type="video/mp4">
+                        </video>
+                        <span class="absolute bottom-2 right-2 bg-black bg-opacity-75 text-xs font-bold text-white px-2 py-1 rounded">2:30</span>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                             <span class="badge badge-category badge-purple">Skill</span>
+                             <span class="badge badge-outline">Advanced</span>
+                        </div>
+                        <h3 class="h5 m-0 text-white">Advanced Bouldering</h3>
+                    </div>
+                </div>
+                
+                 <!-- Video 9 -->
+                <div class="card p-0 overflow-hidden reveal video-card">
+                    <div class="relative">
+                        <video controls class="w-full aspect-video bg-black">
+                            <source src="videos/sock-gliding-mobility.mp4" type="video/mp4">
+                        </video>
+                        <span class="absolute bottom-2 right-2 bg-black bg-opacity-75 text-xs font-bold text-white px-2 py-1 rounded">3:45</span>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                             <span class="badge badge-category badge-blue">Mobility</span>
+                             <span class="badge badge-outline">Intermediate</span>
+                        </div>
+                        <h3 class="h5 m-0 text-white">Sock Gliding Flow</h3>
+                    </div>
+                </div>
+
+                 <!-- Video 10 -->
+                <div class="card p-0 overflow-hidden reveal video-card">
+                    <div class="relative">
+                        <video controls class="w-full aspect-video bg-black">
+                            <source src="videos/battle-rope-slams.mp4" type="video/mp4">
+                        </video>
+                        <span class="absolute bottom-2 right-2 bg-black bg-opacity-75 text-xs font-bold text-white px-2 py-1 rounded">0:30</span>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                             <span class="badge badge-category badge-accent">Power</span>
+                             <span class="badge badge-outline">Advanced</span>
+                        </div>
+                        <h3 class="h5 m-0 text-white">Battle Rope Slams</h3>
+                    </div>
+                </div>
+
+                 <!-- Video 11 -->
+                <div class="card p-0 overflow-hidden reveal video-card">
+                    <div class="relative">
+                        <video controls class="w-full aspect-video bg-black">
+                            <source src="videos/bouldering-endurance.mp4" type="video/mp4">
+                        </video>
+                        <span class="absolute bottom-2 right-2 bg-black bg-opacity-75 text-xs font-bold text-white px-2 py-1 rounded">4:00</span>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                             <span class="badge badge-category badge-green">Endurance</span>
+                             <span class="badge badge-outline">Intermediate</span>
+                        </div>
+                        <h3 class="h5 m-0 text-white">Bouldering Endurance</h3>
+                    </div>
+                </div>
+
+                 <!-- Video 12 -->
+                <div class="card p-0 overflow-hidden reveal video-card">
+                    <div class="relative">
+                        <video controls class="w-full aspect-video bg-black">
+                            <source src="videos/bouldering-overhang.mp4" type="video/mp4">
+                        </video>
+                        <span class="absolute bottom-2 right-2 bg-black bg-opacity-75 text-xs font-bold text-white px-2 py-1 rounded">2:15</span>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                             <span class="badge badge-category badge-blue">Technique</span>
+                             <span class="badge badge-outline">Advanced</span>
+                        </div>
+                        <h3 class="h5 m-0 text-white">Bouldering Overhang</h3>
+                    </div>
+                </div>
+
+                 <!-- Video 13 -->
+                <div class="card p-0 overflow-hidden reveal video-card">
+                    <div class="relative">
+                        <video controls class="w-full aspect-video bg-black">
+                            <source src="videos/bouldering-static-hold.mp4" type="video/mp4">
+                        </video>
+                        <span class="absolute bottom-2 right-2 bg-black bg-opacity-75 text-xs font-bold text-white px-2 py-1 rounded">1:00</span>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                             <span class="badge badge-category badge-accent">Strength</span>
+                             <span class="badge badge-outline">Intermediate</span>
+                        </div>
+                        <h3 class="h5 m-0 text-white">Bouldering Static Hold</h3>
+                    </div>
+                </div>
+
+                 <!-- Video 14 -->
+                <div class="card p-0 overflow-hidden reveal video-card">
+                    <div class="relative">
+                        <video controls class="w-full aspect-video bg-black">
+                            <source src="videos/hanging-leg-raises.mp4" type="video/mp4">
+                        </video>
+                        <span class="absolute bottom-2 right-2 bg-black bg-opacity-75 text-xs font-bold text-white px-2 py-1 rounded">1:15</span>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                             <span class="badge badge-category badge-purple">Core</span>
+                             <span class="badge badge-outline">Advanced</span>
+                        </div>
+                        <h3 class="h5 m-0 text-white">Hanging Leg Raises</h3>
+                    </div>
+                </div>
+
+                 <!-- Video 15 -->
+                <div class="card p-0 overflow-hidden reveal video-card">
+                    <div class="relative">
+                        <video controls class="w-full aspect-video bg-black">
+                            <source src="videos/indoor-bouldering-technical.mp4" type="video/mp4">
+                        </video>
+                        <span class="absolute bottom-2 right-2 bg-black bg-opacity-75 text-xs font-bold text-white px-2 py-1 rounded">2:45</span>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                             <span class="badge badge-category badge-purple">Skill</span>
+                             <span class="badge badge-outline">Intermediate</span>
+                        </div>
+                        <h3 class="h5 m-0 text-white">Technical Bouldering</h3>
+                    </div>
+                </div>
+
+                 <!-- Video 16 -->
+                <div class="card p-0 overflow-hidden reveal video-card">
+                    <div class="relative">
+                        <video controls class="w-full aspect-video bg-black">
+                            <source src="videos/med-ball-wall-tosses.mp4" type="video/mp4">
+                        </video>
+                        <span class="absolute bottom-2 right-2 bg-black bg-opacity-75 text-xs font-bold text-white px-2 py-1 rounded">1:20</span>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                             <span class="badge badge-category badge-accent">Power</span>
+                             <span class="badge badge-outline">Intermediate</span>
+                        </div>
+                        <h3 class="h5 m-0 text-white">Medicine Ball Wall Tosses</h3>
+                    </div>
+                </div>
+
+                 <!-- Video 17 -->
+                <div class="card p-0 overflow-hidden reveal video-card">
+                    <div class="relative">
+                        <video controls class="w-full aspect-video bg-black">
+                            <source src="videos/seated-sled-row.mp4" type="video/mp4">
+                        </video>
+                        <span class="absolute bottom-2 right-2 bg-black bg-opacity-75 text-xs font-bold text-white px-2 py-1 rounded">1:30</span>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                             <span class="badge badge-category badge-accent">Strength</span>
+                             <span class="badge badge-outline">Beginner</span>
+                        </div>
+                        <h3 class="h5 m-0 text-white">Seated Sled Row</h3>
+                    </div>
+                </div>
+
+                 <!-- Video 18 -->
+                <div class="card p-0 overflow-hidden reveal video-card">
+                    <div class="relative">
+                        <video controls class="w-full aspect-video bg-black">
+                            <source src="videos/sliding-mountain-climbers.mp4" type="video/mp4">
+                        </video>
+                        <span class="absolute bottom-2 right-2 bg-black bg-opacity-75 text-xs font-bold text-white px-2 py-1 rounded">1:10</span>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                             <span class="badge badge-category badge-green">Conditioning</span>
+                             <span class="badge badge-outline">Advanced</span>
+                        </div>
+                        <h3 class="h5 m-0 text-white">Sliding Mountain Climbers</h3>
+                    </div>
+                </div>
+
+                 <!-- Video 19 -->
+                <div class="card p-0 overflow-hidden reveal video-card">
+                    <div class="relative">
+                        <video controls class="w-full aspect-video bg-black">
+                            <source src="videos/squat-mobility-instruction.mp4" type="video/mp4">
+                        </video>
+                        <span class="absolute bottom-2 right-2 bg-black bg-opacity-75 text-xs font-bold text-white px-2 py-1 rounded">4:15</span>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                             <span class="badge badge-category badge-blue">Mobility</span>
+                             <span class="badge badge-outline">Beginner</span>
+                        </div>
+                        <h3 class="h5 m-0 text-white">Squat Mobility Instruction</h3>
+                    </div>
+                </div>
+
+                 <!-- Video 20 -->
+                <div class="card p-0 overflow-hidden reveal video-card">
+                    <div class="relative">
+                        <video controls class="w-full aspect-video bg-black">
+                            <source src="videos/vipr-functional-training.mp4" type="video/mp4">
+                        </video>
+                        <span class="absolute bottom-2 right-2 bg-black bg-opacity-75 text-xs font-bold text-white px-2 py-1 rounded">2:20</span>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                             <span class="badge badge-category badge-blue">Functional</span>
+                             <span class="badge badge-outline">Intermediate</span>
+                        </div>
+                        <h3 class="h5 m-0 text-white">ViPR Functional Training</h3>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="text-center reveal max-w-2xl mx-auto p-8 border border-dark-alt rounded-2xl bg-card-dark">
+                <h3 class="h5 mb-4 text-white">Need personal guidance?</h3>
+                <p class="text-gray-400 mb-6">Videos are great, but feedback is better. Book an assessment to check your form.</p>
+                <a href="contact.html" class="btn btn-primary">Book Assessment</a>
+            </div>
         </div>
+    </section>
 
-        <!-- Video Card 4: Cable Pulldowns -->
-        <div class="video-card reveal relative rounded-lg bg-gray-900 border overflow-hidden transition-all">
-          <video controls class="w-full block" class="aspect-ratio-16-9">
-            <source src="videos/cable-pulldowns-technique.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-          <div class="video-info p-3">
-            <span class="category-tag inline-block text-accent uppercase font-bold text-xs rounded-full mb-2 bg-accent-dim">Strength</span>
-            <h4 class="text-lg m-0 text-white">Cable Pulldown Technique</h4>
-          </div>
-        </div>
-
-        <!-- Video Card 5: Stability Ball -->
-        <div class="video-card reveal relative rounded-lg bg-gray-900 border overflow-hidden transition-all">
-          <video controls class="w-full block" class="aspect-ratio-16-9">
-            <source src="videos/stability-ball-workout.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-          <div class="video-info p-3">
-            <span class="category-tag inline-block text-accent uppercase font-bold text-xs rounded-full mb-2 bg-accent-dim">Core</span>
-            <h4 class="text-lg m-0 text-white">Stability Ball Core Training</h4>
-          </div>
-        </div>
-
-        <!-- Video Card 6: Battle Ropes -->
-        <div class="video-card reveal relative rounded-lg bg-gray-900 border overflow-hidden transition-all">
-          <video controls class="w-full block" class="aspect-ratio-16-9">
-            <source src="videos/battle-ropes-dynamic.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-          <div class="video-info p-3">
-            <span class="category-tag inline-block text-accent uppercase font-bold text-xs rounded-full mb-2 bg-accent-dim">Strength</span>
-            <h4 class="text-lg m-0 text-white">Battle Ropes Dynamic Training</h4>
-          </div>
-        </div>
-
-        <!-- Video Card 7: Sled Pull -->
-        <div class="video-card reveal relative rounded-lg bg-gray-900 border overflow-hidden transition-all">
-          <video controls class="w-full block" class="aspect-ratio-16-9">
-            <source src="videos/sled-pull-conditioning.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-          <div class="video-info p-3">
-            <span class="category-tag inline-block text-accent uppercase font-bold text-xs rounded-full mb-2 bg-accent-dim">Strength</span>
-            <h4 class="text-lg m-0 text-white">Sled Pull Conditioning</h4>
-          </div>
-        </div>
-
-        <!-- Video Card 8: V6 Bouldering -->
-        <div class="video-card reveal relative rounded-lg bg-gray-900 border overflow-hidden transition-all">
-          <video controls class="w-full block" class="aspect-ratio-16-9">
-            <source src="videos/v6-bouldering-advanced.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-          <div class="video-info p-3">
-            <span class="category-tag inline-block text-accent uppercase font-bold text-xs rounded-full mb-2 bg-accent-dim">Skill</span>
-            <h4 class="text-lg m-0 text-white">V6 Bouldering Advanced</h4>
-          </div>
-        </div>
-
-        <!-- Video Card 9: Sock Gliding Mobility -->
-        <div class="video-card reveal relative rounded-lg bg-gray-900 border overflow-hidden transition-all">
-          <video controls class="w-full block" class="aspect-ratio-16-9">
-            <source src="videos/sock-gliding-mobility.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-          <div class="video-info p-3">
-            <span class="category-tag inline-block text-accent uppercase font-bold text-xs rounded-full mb-2 bg-accent-dim">Mobility</span>
-            <h4 class="text-lg m-0 text-white">Sock Gliding Mobility Flow</h4>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- Bottom CTA -->
-      <div class="text-center max-w-600 mx-auto p-6 bg-accent-dim bg-accent-border rounded-lg">
-        <h3 class="h4 mb-3" class="text-white">Want Personalized Instruction?</h3>
-        <p class="text-gray-300 mb-4">
-          These videos show technique, but real transformation happens with customized coaching tailored to your body and goals.
-        </p>
-        <a href="contact.html" class="btn btn-primary">Book Your Free Movement Assessment</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Video Modal (Coming Soon) -->
-  <div id="videoModal" class="display-none fixed inset-0 bg-black-90 flex items-center justify-center" style="z-index: 9999;" onclick="closeVideoModal()">
-    <div class="max-w-600 bg-gray-900 rounded-lg p-6 text-center position-relative" onclick="event.stopPropagation()">
-      <button onclick="closeVideoModal()" class="position-absolute bg-transparent border-0 text-gray-400 text-3xl cursor-pointer line-height-1" style="top: 16px; right: 16px;">&times;</button>
-      <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2" class="mx-auto mb-4">
-        <circle cx="12" cy="12" r="10"></circle>
-        <polygon points="10 8 16 12 10 16" fill="var(--color-accent)"></polygon>
-      </svg>
-      <h3 class="h3 mb-3" id="videoTitle" class="text-white">Video Coming Soon</h3>
-      <p class="text-gray-300 mb-4">
-        This video is being finalized. Join the email list to be notified when the Movement Library launches with full video content.
-      </p>
-      <form class="flex gap-2 max-w-400 mx-auto" onsubmit="event.preventDefault(); alert('Email subscription would be handled here'); closeVideoModal();">
-        <input type="email" placeholder="Your email" required class="flex-1 p-3 border rounded bg-charcoal text-white" />
-        <button type="submit" class="btn btn-primary">Notify Me</button>
-      </form>
-    </div>
-  </div>
-
-  <!-- FOOTER -->
+    <!-- FOOTER -->
   <footer class="footer">
     <div class="container">
-      <div class="footer-content">
-        <p class="mb-2">
-          <span class="text-accent">MYO</span>FIT Personal Training
-        </p>
-        <p>&copy; 2025 Yolanda Reinert. All rights reserved.</p>
-        <p class="mt-2 font-xs">
-          NASM Certified Personal Trainer · Pilates Instructor · Yoga Instructor
-        </p>
-        <div class="mt-3 flex gap-4 justify-center items-center flex-wrap">
-          <a href="tel:+17736963481" class="text-gray-400 no-underline transition-colors flex items-center gap-2 font-sm hover-accent">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-            </svg>
-            773-696-3481
-          </a>
-          <a href="http://www.myofitpt.com" target="_blank" rel="noopener noreferrer" rel="noopener noreferrer" class="text-gray-400 no-underline transition-colors flex items-center gap-2 font-sm hover-accent">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="10"></circle>
-              <line x1="2" y1="12" x2="22" y2="12"></line>
-              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
-            </svg>
-            myofitpt.com
-          </a>
-          <a href="http://www.facebook.com/myofi.pt?ref=hl" target="_blank" rel="noopener noreferrer" rel="noopener noreferrer" class="text-gray-400 no-underline transition-colors flex items-center gap-2 font-sm hover-accent">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
-            </svg>
-            Facebook
-          </a>
-          <a href="http://www.linkedin.com/profile/view?id=108573553&trk=nav_responsive_tab_profile" target="_blank" rel="noopener noreferrer" rel="noopener noreferrer" class="text-gray-400 no-underline transition-colors flex items-center gap-2 font-sm hover-accent">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-              <rect x="2" y="9" width="4" height="12"></rect>
-              <circle cx="4" cy="4" r="2"></circle>
-            </svg>
-            LinkedIn
-          </a>
-          <a href="https://www.instagram.com/myofit_pt/" target="_blank" rel="noopener noreferrer" rel="noopener noreferrer" class="text-gray-400 no-underline transition-colors flex items-center gap-2 font-sm hover-accent">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-            </svg>
-            @myofit_pt
-          </a>
-          <a href="mailto:myofitpt@gmail.com" class="text-gray-400 no-underline transition-colors flex items-center gap-2 font-sm hover-accent">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-              <polyline points="22,6 12,13 2,6"></polyline>
-            </svg>
-            myofitpt@gmail.com
-          </a>
+      <div class="footer-grid">
+        <!-- Column 1: Brand -->
+        <div class="footer-column">
+          <p class="footer-brand">MYOFIT</p>
+          <p class="footer-tagline text-accent mb-4">Movement & Longevity Training</p>
+          <p class="text-xs text-gray-500 max-w-xs">
+            Helping adults 40+ build strength, reduce pain, and move with confidence through evidence-based personal training.
+          </p>
+        </div>
+        
+        <!-- Column 2: Contact -->
+        <div class="footer-column">
+          <h4 class="footer-heading">Contact</h4>
+          <ul class="footer-links">
+            <li><a href="tel:+17736963481" class="hover-accent">773-696-3481</a></li>
+            <li><a href="mailto:myofitpt@gmail.com" class="hover-accent">myofitpt@gmail.com</a></li>
+            <li><a href="contact.html" class="hover-accent">Book Assessment</a></li>
+            <li><a href="faq.html" class="hover-accent">FAQ</a></li>
+          </ul>
+        </div>
+        
+        <!-- Column 3: Connect -->
+        <div class="footer-column">
+          <h4 class="footer-heading">Connect</h4>
+          <ul class="footer-links">
+            <li><a href="https://www.instagram.com/myofit_pt/" target="_blank" rel="noopener noreferrer" class="hover-accent">Instagram</a></li>
+            <li><a href="https://www.facebook.com/myofi.pt" target="_blank" rel="noopener noreferrer" class="hover-accent">Facebook</a></li>
+            <li><a href="https://www.linkedin.com/profile/view?id=108573553" target="_blank" rel="noopener noreferrer" class="hover-accent">LinkedIn</a></li>
+          </ul>
+        </div>
+        
+        <!-- Column 4: Legal -->
+        <div class="footer-column">
+          <h4 class="footer-heading">Legal</h4>
+          <ul class="footer-links">
+            <li><a href="privacy.html" class="hover-accent">Privacy Policy</a></li>
+            <li><a href="terms.html" class="hover-accent">Terms of Service</a></li>
+            <li><span class="text-gray-600">© 2025 Yolanda Reinert</span></li>
+            <li><span class="text-gray-600 text-xs">NASM-CPT</span></li>
+          </ul>
         </div>
       </div>
     </div>
-        <div class="mt-3 flex gap-4 justify-center items-center flex-wrap">
-          <a href="privacy.html" class="text-gray-400 no-underline transition-colors font-sm hover-accent">Privacy Policy</a>
-          <a href="terms.html" class="text-gray-400 no-underline transition-colors font-sm hover-accent">Terms of Service</a>
-        </div>
   </footer>
 
-  <!-- Image Modal with Inspiring Messages -->
-  <div id="imageModal" class="modal-overlay">
-    <div class="modal-content">
-      <button class="modal-close" aria-label="Close modal">&times;</button>
-      <div class="modal-image-container">
-        <img id="modalImage" src="" alt="">
-      </div>
-      <div class="modal-message">
-        <h3 id="modalTitle"></h3>
-        <p id="modalInspiration"></p>
-        <p class="modal-signature">— Yolanda</p>
-      </div>
-    </div>
-  </div>
-
-  <script src="script.js"></script>
+    <script src="script.js"></script>
+    <script type="module" src="ai-agent.js"></script>
+    <script>
+        // Initialize Icons
+        lucide.createIcons();
+    </script>
 </body>
 </html>
