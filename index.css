@@ -1446,10 +1446,23 @@ footer {
     height: 80px;
     border-radius: 50%;
     object-fit: cover;
-    object-position: center 30%;
+    object-position: center 20%;
     border: 3px solid var(--color-accent);
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
     flex-shrink: 0;
+}
+
+/* 16b. UTILITY CLASSES (Added for Image Audit) */
+.object-top {
+    object-position: top center !important;
+}
+
+.object-center-20 {
+    object-position: center 20% !important;
+}
+
+.object-center {
+    object-position: center center !important;
 }
 
 .client-info h4 {
