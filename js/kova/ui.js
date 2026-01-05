@@ -30,8 +30,8 @@ class KovaUI {
       <div id="kova-widget" class="kova-widget">
         <!-- LAUNCHER -->
         <button id="kova-launcher" class="kova-launcher">
-          <div class="kova-avatar">KD</div>
-          <span class="kova-label">Ask Kova AI</span>
+          <div class="kova-avatar">YR</div>
+          <span class="kova-label">Ask Yolanda</span>
         </button>
 
         <!-- CHAT WINDOW -->

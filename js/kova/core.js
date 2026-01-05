@@ -13,6 +13,25 @@ export class KovaCore {
     this.model = null;
     this.genAI = null;
     this.isInitialized = false;
+    
+    // PLATFORM EMULATION: Load History
+    this.loadHistory();
+  }
+
+  loadHistory() {
+    const saved = localStorage.getItem('kova_chat_history');
+    if (saved) {
+      try {
+        this.history = JSON.parse(saved);
+      } catch (e) {
+        console.error('Failed to load history', e);
+        this.history = [];
+      }
+    }
+  }
+
+  saveHistory() {
+    localStorage.setItem('kova_chat_history', JSON.stringify(this.history));
   }
 
   /**
@@ -114,6 +133,9 @@ export class KovaCore {
       // Update history manually to keep it clean (without system notes)
       this.history.push({ role: 'user', parts: [{ text: userMessage }] });
       this.history.push({ role: 'model', parts: [{ text: response }] });
+      
+      // PLATFORM EMULATION: Persist
+      this.saveHistory();
 
       return {
         success: true,

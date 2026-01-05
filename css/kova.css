@@ -210,9 +210,20 @@
 @media (max-width: 480px) {
   .kova-window {
     width: 100%;
-    height: 100%;
+    height: 100dvh; /* Modern mobile viewport support */
     bottom: 0;
     right: 0;
     border-radius: 0;
+    border: none;
+  }
+  
+  .kova-header {
+    border-radius: 0;
+    padding-top: env(safe-area-inset-top, 20px); /* Notch support */
+  }
+  
+  .kova-input-area {
+    border-radius: 0;
+    padding-bottom: env(safe-area-inset-bottom, 20px); /* Home bar support */
   }
 }
