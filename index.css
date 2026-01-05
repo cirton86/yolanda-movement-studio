@@ -652,6 +652,35 @@ footer {
 }
 
 
+/* 4. LAYOUT & GRID
+   ============================================ */
+.section {
+  padding: var(--space-20) 0;
+  position: relative;
+}
+
+/* GLOBAL IMAGE FIX FOR CARDS */
+.card img,
+.program-card img,
+.video-card img,
+.service-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover !important;
+    aspect-ratio: 16/9; /* Enforce consistent aspect ratio */
+}
+
+/* STICKY HEADER FOR MASTER OS MOBILE NAV */
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(5, 5, 5, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
 /* 10. CAROUSEL (Added for Harmonization)
    ============================================ */
 .testimonial-carousel-container { position: relative; overflow: hidden; margin: 0 auto; max-width: 1200px; width: 100%; }
