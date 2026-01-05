@@ -8,6 +8,9 @@ const API_CONFIG = {
   // User will be prompted to enter their key on first visit
   get GEMINI_API_KEY() {
     // Check localStorage first
+        // Default API key if none is stored
+    const DEFAULT_API_KEY = 'AIzaSyDFU3tOheW2JebgoAadr5F1-TyXLXwvfyU';
+    
     const storedKey = localStorage.getItem('gemini_api_key');
     if (storedKey) {
       return storedKey;
@@ -28,8 +31,8 @@ const API_CONFIG = {
     }
     
     // Return null if user cancels
-    return null;
-  }
+    // Use default API key if user cancels
+    return DEFAULT_API_KEY;  }
 };
 
 export default API_CONFIG;
