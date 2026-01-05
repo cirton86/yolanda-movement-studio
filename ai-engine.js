@@ -99,14 +99,14 @@ ${AI_CONFIG.conversationStrategy}`;
   /**
    * Send a message and get AI response
    */
-  async sendMessage(userMessage, pageContext = 'home', conversationPhase = 1) {
+  async sendMessage(userMessage, pageContext = 'home', conversationPhase = 1, leadScore = 0) {
     if (!this.chat) {
       throw new Error('Chat session not started');
     }
 
     try {
       // Add context to the message
-      const contextualMessage = this.addContext(userMessage, pageContext, conversationPhase);
+      const contextualMessage = this.addContext(userMessage, pageContext, conversationPhase, leadScore);
       
       // Send message to Gemini
       const result = await this.chat.sendMessage(contextualMessage);
@@ -145,16 +145,25 @@ ${AI_CONFIG.conversationStrategy}`;
   /**
    * Add contextual information to user message
    */
-  addContext(userMessage, pageContext, conversationPhase) {
+  addContext(userMessage, pageContext, conversationPhase, leadScore) {
     const context = AI_CONFIG.pageContext[pageContext] || AI_CONFIG.pageContext.home;
     
     let contextualMessage = userMessage;
+
+    // INJECT LEAD SCORE CONTEXT (Hidden system note)
+    if (leadScore > 50) {
+      contextualMessage = `[SYSTEM NOTE: LEAD SCORE IS ${leadScore}/100. HIGH VALUE/URGENCY DETECTED. PRIORITIZE BOOKING.]\n\n${userMessage}`;
+    }
 
     // Add page context only on first message
     if (conversationPhase === 1) {
       contextualMessage = `[User is on the ${pageContext} page]\n\n${userMessage}`;
     }
 
+    // INJECT LEAD SCORE CONTEXT (Hidden system note)
+    const analysis = AI_CONFIG.leadScoreAnalysis; // We need to access analysis from session ideally, but engine doesn't have direct access to session object easily.
+    // Better approach: Pass analysis or score into sendMessage
+    
     return contextualMessage;
   }
 

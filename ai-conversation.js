@@ -161,7 +161,51 @@ class ConversationSession {
       askedAboutPricing: /price|cost|how much|pricing|afford/.test(allText),
       expressedInterest: /interested|sounds good|i think|i need|want to/.test(allText),
       askedAboutBooking: /book|schedule|appointment|assessment|start|get started/.test(allText),
+      leadScore: this.calculateLeadScore(allText, this.getMessageCount()),
+      dropOffRisk: this.detectDropOff(),
     };
+  }
+
+  /**
+   * Calculate Real-Time Lead Score (0-100)
+   * Based on AI Employee Directive #15
+   */
+  calculateLeadScore(allText, messageCount) {
+    let score = 0;
+    
+    // 1. Urgency (High impact)
+    if (/tomorrow|asap|immediately|urgent|pain|hurts/.test(allText)) score += 25;
+    
+    // 2. Fit (Keywords match niche)
+    if (/40\+|senior|older|injury|pt|physical therapy|marathon|hyrox/.test(allText)) score += 20;
+    
+    // 3. Readiness (Booking intent)
+    if (/price|cost|schedule|book|start|where are you/.test(allText)) score += 30;
+    
+    // 4. Engagement (Depth)
+    if (messageCount > 5) score += 15;
+    if (messageCount > 10) score += 10;
+    
+    return Math.min(score, 100);
+  }
+
+  /**
+   * Detect Drop-Off Risk
+   * Based on AI Employee Directive #16
+   */
+  detectDropOff() {
+    const lastMessageTime = this.messages.length > 0 
+      ? this.messages[this.messages.length - 1].timestamp 
+      : Date.now();
+      
+    const secondsSinceLastMessage = (Date.now() - lastMessageTime) / 1000;
+    
+    // Flag if user is silent for > 45 seconds during active chat
+    if (this.messages.length > 0 && secondsSinceLastMessage > 45) {
+      return true;
+    }
+    
+    return false;
   }
 
   /**

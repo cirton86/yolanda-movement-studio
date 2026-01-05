@@ -317,7 +317,11 @@ class YolandaAI {
       const pageContext = this.session.metadata.pageContext;
       const conversationPhase = this.session.getConversationPhase();
       
-      const result = await this.engine.sendMessage(userMessage, pageContext, conversationPhase);
+      // Calculate Lead Score (AI Employee Directive #15)
+      const analysis = this.session.analyzeConversation();
+      const leadScore = analysis.leadScore || 0;
+      
+      const result = await this.engine.sendMessage(userMessage, pageContext, conversationPhase, leadScore);
       
       // Simulate typing delay for more natural feel
       await this.delay(AI_CONFIG.conversation.typingDelay);
