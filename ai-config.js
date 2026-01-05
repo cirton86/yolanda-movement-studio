@@ -6,8 +6,8 @@
 export const AI_CONFIG = {
   // Model Configuration
   model: {
-    name: "gemini-1.5-flash-latest",
-    fallback: "gemini-1.5-pro-latest",
+    name: "gemini-2.0-flash",
+    fallback: "gemini-1.5-flash",
     temperature: 0.7,
     topP: 0.95,
     topK: 40,
