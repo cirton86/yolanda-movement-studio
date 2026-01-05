@@ -51,7 +51,8 @@ function initLibraryFilters() {
 
 // 1. Mobile Menu Logic
 function initMobileMenu() {
-    const toggle = document.querySelector('.mobile-toggle');
+    // Support both old (.mobile-toggle) and new (.menu-toggle) classes
+    const toggle = document.querySelector('.mobile-toggle') || document.querySelector('.menu-toggle');
     
     if (toggle) {
         toggle.addEventListener('click', () => {
@@ -68,6 +69,9 @@ function initMobileMenu() {
                             <a href="about.html">About</a>
                             <a href="programs.html">Programs</a>
                             <a href="results.html">Results</a>
+                            <a href="movement-library.html">Library</a>
+                            <a href="thank-you.html">Thank You</a>
+                            <a href="faq.html">FAQ</a>
                             <a href="contact.html">Contact</a>
                         </nav>
                     </div>

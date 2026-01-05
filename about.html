@@ -21,29 +21,31 @@
 <body>
 
     <!-- NAVIGATION -->
-    <nav class="navbar" aria-label="Main Navigation">
-        <div class="container nav-container">
-            <a href="index.html" class="logo">
-                <div class="logo-main">MYOFIT</div>
-                <div class="logo-tagline">Movement & Longevity Training</div>
-            </a>
-            
-            <div class="nav-links">
-                <a href="index.html">Home</a>
-                <a href="about.html" class="active" aria-current="page">About</a>
-                <a href="programs.html">Programs</a>
-                <a href="results.html">Results</a>
-                <a href="movement-library.html">Library</a>
-                <a href="thank-you.html">Thank You</a>
-                <a href="faq.html">FAQ</a>
-                <a href="contact.html" class="text-accent">Contact</a>
-            </div>
-            
-            <button class="mobile-toggle text-white md:hidden" aria-label="Open Mobile Menu">
-                <i data-lucide="menu"></i>
-            </button>
-        </div>
+  <header class="header">
+    <nav class="nav container">
+      <a href="index.html" class="logo">
+        <div class="logo-main">MYOFIT</div>
+        <div class="logo-tagline">Movement & Longevity Training</div>
+      </a>
+      
+      <button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">
+        ☰
+      </button>
+      
+      <ul class="nav-links" id="nav-links" aria-label="Main navigation">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link active">About</a></li>
+        <li><a href="programs.html" class="nav-link">Programs</a></li>
+        <li><a href="results.html" class="nav-link">Results</a></li>
+        <li><a href="movement-library.html" class="nav-link">Library</a></li>
+        <li><a href="thank-you.html" class="nav-link">Thank You</a></li>
+        <li><a href="faq.html" class="nav-link">FAQ</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+        <li><a href="mailto:myofitpt@gmail.com" class="btn btn-secondary btn-nav">Email Yolanda</a></li>
+        <li><a href="contact.html" class="btn btn-primary btn-nav">Book Assessment</a></li>
+      </ul>
     </nav>
+  </header>
 
     <!-- HERO SECTION -->
     <header class="hero-about">
